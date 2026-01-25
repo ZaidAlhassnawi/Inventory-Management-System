@@ -1,11 +1,8 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel; // للـ ObservableObject
 using CommunityToolkit.Mvvm.Input;          // للـ RelayCommand
-using InventoryManagementSystem_BusinessLayer.UserServices;
 using InventoryManagementSystem_Model.Interfaces;
-using InventoryManagementSystem_Model.Models;
 using InventoryManagementSystem_PresentaionLayer.Global;
 using InventoryManagementSystem_PresentaionLayer.MainSideBar;
-using InventoryManagementSystem_PresentaionLayer.User.ViewUser;
 using InventoryManagementSystem_PresentaionLayer.ViewUser;
 using Microsoft.Extensions.DependencyInjection;
 using System.ComponentModel.DataAnnotations;

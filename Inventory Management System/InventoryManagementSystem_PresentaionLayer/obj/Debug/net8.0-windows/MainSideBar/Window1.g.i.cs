@@ -79,7 +79,8 @@ namespace InventoryManagementSystem_PresentaionLayer.MainSideBar {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/InventoryManagementSystem_PresentaionLayer;component/mainsidebar/window1.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/InventoryManagementSystem_PresentaionLayer;V1.0.0.0;component/mainsidebar/window" +
+                    "1.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\MainSideBar\Window1.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

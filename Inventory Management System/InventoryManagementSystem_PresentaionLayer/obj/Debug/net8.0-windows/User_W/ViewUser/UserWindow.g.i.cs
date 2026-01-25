@@ -61,8 +61,8 @@ namespace InventoryManagementSystem_PresentaionLayer.ViewUser {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/InventoryManagementSystem_PresentaionLayer;component/user_w/viewuser/userwindow." +
-                    "xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/InventoryManagementSystem_PresentaionLayer;V1.0.0.0;component/user_w/viewuser/us" +
+                    "erwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\User_W\ViewUser\UserWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

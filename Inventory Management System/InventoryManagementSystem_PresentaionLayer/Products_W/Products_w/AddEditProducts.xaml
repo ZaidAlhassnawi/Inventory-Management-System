@@ -4,125 +4,433 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:InventoryManagementSystem_PresentaionLayer.Products_W.Products_w"
-        mc:Ignorable="d"
-        Title="Add New Product" Height="680" Width="700"
+        xmlns:Num="clr-namespace:InventoryManagementSystem_PresentaionLayer.Global"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        mc:Ignorable="d" x:Name="ProductWindow"
+        Title="Add New Product" Height="780" Width="700"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None" AllowsTransparency="True" Background="Transparent">
-    
-    
-    <Border Background="White" CornerRadius="12" Margin="20">
-        <Border.Effect>
-            <DropShadowEffect BlurRadius="20" ShadowDepth="5" Opacity="0.2" Color="Black"/>
-        </Border.Effect>
 
-        <Grid Margin="30">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVis"/>
+    </Window.Resources>
 
-            <StackPanel Grid.Row="0" Margin="0,0,0,20">
-                <Grid>
-                    <StackPanel>
-                        <TextBlock Text="Add New Product" FontSize="20" FontWeight="Bold" Foreground="{StaticResource PrimaryBlack}"/>
-                        <TextBlock Text="Fill in the details to add a new product to your inventory" FontSize="14" Foreground="#6B7280" Margin="0,5,0,0"/>
-                    </StackPanel>
-                    <Button Content="✕" HorizontalAlignment="Right" VerticalAlignment="Top" 
-                            Background="Transparent" BorderThickness="0" Foreground="#9CA3AF" FontSize="16" Cursor="Hand"/>
-                </Grid>
-            </StackPanel>
+    <Grid>
 
-            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Margin="0,0,0,20">
-                <StackPanel>
+        <Border Background="White" CornerRadius="12" Margin="20">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="20" ShadowDepth="5" Opacity="0.2" Color="Black"/>
+            </Border.Effect>
 
-                    <Grid Margin="0,0,0,15">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="20"/>
-                            <ColumnDefinition Width="2*"/>
-                        </Grid.ColumnDefinitions>
+            <Grid Margin="30">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
 
-                        <StackPanel Grid.Column="0">
-                            <TextBlock Text="SKU" Style="{StaticResource LabelStyle}"/>
-                            <TextBox x:Name="txtSKU" Style="{StaticResource ModernInputStyle}" FontWeight="SemiBold" Foreground="#2563EB"
-                                     Text="{Binding SKU, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}"/>
+                <StackPanel Grid.Row="0" Margin="0,0,0,20">
+                    <Grid>
+                        <StackPanel>
+                            <TextBlock Text="Add New Product" FontSize="20" FontWeight="Bold" Foreground="{StaticResource PrimaryBlack}"/>
+                            <TextBlock Text="Fill in the details to add a new product to your inventory" FontSize="14" Foreground="#6B7280" Margin="0,5,0,0"/>
                         </StackPanel>
-
-                        <StackPanel Grid.Column="2">
-                            <TextBlock Text="Product Name" Style="{StaticResource LabelStyle}"/>
-                            <TextBox x:Name="txtProductName" Style="{StaticResource ModernInputStyle}" Tag="Enter product name"
-                                     Text="{Binding ProductName, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}">
-                            </TextBox>
-                        </StackPanel>
+                        <Button Content="✕" HorizontalAlignment="Right" VerticalAlignment="Top" 
+                                Background="Transparent" BorderThickness="0" Foreground="#9CA3AF" FontSize="16" Cursor="Hand"
+                                Command="{Binding CancelCommand}" 
+                                CommandParameter="{Binding ElementName=ProductWindow}"/>
                     </Grid>
-
-                    <Grid Margin="0,0,0,15">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="20"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-
-                        <StackPanel Grid.Column="0">
-                            <TextBlock Text="Category" Style="{StaticResource LabelStyle}"/>
-                            <ComboBox Style="{StaticResource ModernComboBoxStyle}" Text="Select category" IsEditable="True" IsReadOnly="True"
-                                      ItemsSource="{Binding CategoreyList}"
-                                      DisplayMemberPath="CategoreName"
-                                      SelectedValuePath="CategoryID"
-                                      SelectedValue="{Binding CurrentProduct.CategoryID, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-                        </StackPanel>
-
-                        <StackPanel Grid.Column="2">
-                            <TextBlock Text="Supplier" Style="{StaticResource LabelStyle}"/>
-                            <ComboBox Style="{StaticResource ModernComboBoxStyle}" Text="Select supplier" IsEditable="True" IsReadOnly="True"/>
-                        </StackPanel>
-                    </Grid>
-
-                    <Grid Margin="0,0,0,15">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="20"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="20"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-
-                        <StackPanel Grid.Column="0">
-                            <TextBlock Text="Quantity" Style="{StaticResource LabelStyle}"/>
-                            <TextBox Text="0" Style="{StaticResource ModernInputStyle}"/>
-                        </StackPanel>
-
-                        <StackPanel Grid.Column="2">
-                            <TextBlock Text="Cost Price" Style="{StaticResource LabelStyle}"/>
-                            <TextBox Text="0" Style="{StaticResource ModernInputStyle}"/>
-                        </StackPanel>
-
-                        <StackPanel Grid.Column="4">
-                            <TextBlock Text="Selling Price" Style="{StaticResource LabelStyle}"/>
-                            <TextBox Text="0" Style="{StaticResource ModernInputStyle}"/>
-                        </StackPanel>
-                    </Grid>
-
-                    <StackPanel Margin="0,0,0,15">
-                        <TextBlock Text="Image URL (optional)" Style="{StaticResource LabelStyle}"/>
-                        <TextBox Text="https://example.com/image.jpg" Style="{StaticResource ModernInputStyle}" Foreground="#6B7280"/>
-                    </StackPanel>
-
-                    <StackPanel>
-                        <TextBlock Text="Description" Style="{StaticResource LabelStyle}"/>
-                        <TextBox Text="Product description..." Style="{StaticResource ModernInputStyle}" 
-                                 Height="100" TextWrapping="Wrap" VerticalContentAlignment="Top" Padding="10"/>
-                    </StackPanel>
-
                 </StackPanel>
-            </ScrollViewer>
 
-            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
-                <Button Content="Cancel" Style="{StaticResource SecondaryButtonStyle}" Margin="0,0,10,0" Width="100"/>
-                <Button Content="Add Product" Style="{StaticResource PrimaryButtonStyle}" Width="120"/>
-            </StackPanel>
+                <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Margin="0,0,0,20">
+                    <StackPanel>
 
+                        <Grid Margin="0,0,0,15">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="20"/>
+                                <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel Grid.Column="0" Margin="5">
+                                <TextBlock Text="SKU" Style="{StaticResource LabelStyle}"/>
+                                <Grid>
+                                    <TextBox x:Name="txtSKU" Style="{StaticResource InputTextBoxStyle}" Tag="Enter SKU"
+                                             Text="{Binding SKU, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}"/>
+                                    <TextBlock Text="Product SKU" Foreground="Gray" VerticalAlignment="Center" Padding="8 0" Margin="7,0,0,0" IsHitTestVisible="False">
+                                        <TextBlock.Style>
+                                            <Style TargetType="TextBlock">
+                                                <Setter Property="Visibility" Value="Collapsed"/>
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding Text, ElementName=txtSKU}" Value="">
+                                                        <Setter Property="Visibility" Value="Visible"/>
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
+                                </Grid>
+                                <TextBlock Text="{Binding (Validation.Errors)[0].ErrorContent, ElementName=txtSKU}"
+                                           Foreground="Red" FontSize="12" Margin="0,2,0,0">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock">
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding (Validation.HasError), ElementName=txtSKU}" Value="False">
+                                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
+                            </StackPanel>
+
+                            <StackPanel Grid.Column="2" Margin="5">
+                                <TextBlock Text="Product Name" Style="{StaticResource LabelStyle}"/>
+                                <Grid >
+                                    <TextBox x:Name="txtProductName" Style="{StaticResource InputTextBoxStyle}" Tag="Enter product name"
+                                             Text="{Binding ProductName, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}"/>
+                                    <TextBlock Text="Enter Product Name" Foreground="Gray" VerticalAlignment="Center" Padding="8 0" Margin="7,0,0,0" IsHitTestVisible="False">
+                                        <TextBlock.Style>
+                                            <Style TargetType="TextBlock">
+                                                <Setter Property="Visibility" Value="Collapsed"/>
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding Text, ElementName=txtProductName}" Value="">
+                                                        <Setter Property="Visibility" Value="Visible"/>
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
+                                </Grid>
+                                <TextBlock Text="{Binding (Validation.Errors)[0].ErrorContent, ElementName=txtProductName}"
+                                           Foreground="Red" FontSize="12" Margin="0,2,0,0">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock">
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding (Validation.HasError), ElementName=txtProductName}" Value="False">
+                                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
+                            </StackPanel>
+                        </Grid>
+
+                        <Grid Margin="0,0,0,15">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="20"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel Grid.Column="0" Margin="5">
+                                <TextBlock Text="Category" Style="{StaticResource LabelStyle}"/>
+                                <Grid>
+                                    <ComboBox x:Name="cbCategory" Style="{StaticResource InputComboBoxStyle}" 
+                                              IsEditable="False" IsReadOnly="True"
+                                              ItemsSource="{Binding CategoreyList}"
+                                              SelectedValuePath="CategoryID"
+                                              SelectedValue="{Binding CurrentProduct.CategoryID, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}">
+                                        <ComboBox.ItemTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding CategoreName}"/>
+                                            </DataTemplate>
+                                        </ComboBox.ItemTemplate>
+                                    </ComboBox>
+                                    <TextBlock Text="Select Category" Foreground="Gray" VerticalAlignment="Center" Margin="7,0,0,0" IsHitTestVisible="False">
+                                        <TextBlock.Style>
+                                            <Style TargetType="TextBlock">
+                                                <Setter Property="Visibility" Value="Collapsed"/>
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding SelectedIndex, ElementName=cbCategory}" Value="-1">
+                                                        <Setter Property="Visibility" Value="Visible"/>
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
+                                </Grid>
+                                <TextBlock Text="{Binding (Validation.Errors)[0].ErrorContent, ElementName=cbCategory}"
+                                           Foreground="Red" FontSize="12" Margin="0,2,0,0">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock">
+                                            <Setter Property="Visibility" Value="Visible"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding (Validation.HasError), ElementName=cbCategory}" Value="False">
+                                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
+                            </StackPanel>
+
+                            <StackPanel Grid.Column="2" Margin="5">
+                                <TextBlock Text="Supplier" Style="{StaticResource LabelStyle}"/>
+                                <Grid>
+                                    <ComboBox x:Name="cbSupplier" Style="{StaticResource InputComboBoxStyle}" 
+                                              IsEditable="False" IsReadOnly="True"
+                                              ItemsSource="{Binding SupplierList}"
+                                              SelectedValuePath="SupplierID"
+                                              SelectedValue="{Binding CurrentProduct.SupplierID, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}">
+                                        <ComboBox.ItemTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding SupplierName}"/>
+                                            </DataTemplate>
+                                        </ComboBox.ItemTemplate>
+                                    </ComboBox>
+                                    <TextBlock Text="Select supplier" Foreground="Gray" VerticalAlignment="Center" Margin="7,0,0,0" IsHitTestVisible="False">
+                                        <TextBlock.Style>
+                                            <Style TargetType="TextBlock">
+                                                <Setter Property="Visibility" Value="Collapsed"/>
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding SelectedIndex, ElementName=cbSupplier}" Value="-1">
+                                                        <Setter Property="Visibility" Value="Visible"/>
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
+                                </Grid>
+                                <TextBlock Text="{Binding (Validation.Errors)[0].ErrorContent, ElementName=cbSupplier}"
+                                           Foreground="Red" FontSize="12" Margin="0,2,0,0">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock">
+                                            <Setter Property="Visibility" Value="Visible"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding (Validation.HasError), ElementName=cbSupplier}" Value="False">
+                                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
+                            </StackPanel>
+                        </Grid>
+
+                        <Grid Margin="0,0,0,15" VerticalAlignment="Center">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="20"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="20"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Center">
+                                <TextBlock Text="Quantity" FontWeight="SemiBold" Margin="0,0,0,5" Foreground="#333"/>
+                                <Border Style="{StaticResource QuantityBorderStyle}">
+                                    <Grid>
+                                        <TextBox x:Name="txtStock"
+                                                 Text="{Binding Stock, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}"
+                                                 Style="{StaticResource QuantityTextBoxStyle}"/>
+                                        <TextBlock Text="0" Foreground="Gray" VerticalAlignment="Center" Margin="7,0,0,0" IsHitTestVisible="False">
+                                            <TextBlock.Style>
+                                                <Style TargetType="TextBlock">
+                                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding Text, ElementName=txtStock}" Value="">
+                                                            <Setter Property="Visibility" Value="Visible"/>
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </TextBlock.Style>
+                                        </TextBlock>
+                                    </Grid>
+                                </Border>
+                                <TextBlock Text="{Binding (Validation.Errors)[0].ErrorContent, ElementName=txtStock}"
+                                           Foreground="Red" FontSize="12" Margin="0,2,0,0" TextWrapping="Wrap">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock">
+                                            <Setter Property="Visibility" Value="Visible"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding (Validation.HasError), ElementName=txtStock}" Value="False">
+                                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
+                            </StackPanel>
+
+                            <StackPanel Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Center">
+                                <TextBlock Text="Cost Price" FontWeight="SemiBold" Margin="0,0,0,5" Foreground="#333"/>
+                                <Border Style="{StaticResource QuantityBorderStyle}">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        
+                                        <TextBox x:Name="txtCostPrice" Grid.Column="0"
+                                                 Text="{Binding CostPrice, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}"
+                                                 Style="{StaticResource QuantityTextBoxStyle}"
+                                                 />
+                                        <TextBlock Text="0" Foreground="Gray" VerticalAlignment="Center" Margin="7,0,0,0" IsHitTestVisible="False">
+                                            <TextBlock.Style>
+                                                <Style TargetType="TextBlock">
+                                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding Text, ElementName=txtCostPrice}" Value="">
+                                                            <Setter Property="Visibility" Value="Visible"/>
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </TextBlock.Style>
+                                        </TextBlock>
+                                    </Grid>
+                                </Border>
+                                <TextBlock Text="{Binding (Validation.Errors)[0].ErrorContent, ElementName=txtCostPrice}"
+                                           Foreground="Red" FontSize="12" Margin="0,2,0,0" TextWrapping="Wrap">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock">
+                                            <Setter Property="Visibility" Value="Visible"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding (Validation.HasError), ElementName=txtCostPrice}" Value="False">
+                                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
+                            </StackPanel>
+
+                            <StackPanel Grid.Column="4" VerticalAlignment="Top" HorizontalAlignment="Center">
+                                <TextBlock Text="Selling Price" FontWeight="SemiBold" Margin="0,0,0,5" Foreground="#333"/>
+                                <Border Style="{StaticResource QuantityBorderStyle}">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBox x:Name="txtSellingPrice"  Grid.Column="0"
+                                                 Text="{Binding SellingPrice, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}"
+                                                 Style="{StaticResource QuantityTextBoxStyle}"/>
+                                        <TextBlock Text="0" Foreground="Gray" VerticalAlignment="Center" Margin="7,0,0,0" IsHitTestVisible="False">
+                                            <TextBlock.Style>
+                                                <Style TargetType="TextBlock">
+                                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding Text, ElementName=txtSellingPrice}" Value="">
+                                                            <Setter Property="Visibility" Value="Visible"/>
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </TextBlock.Style>
+                                        </TextBlock>
+                                    </Grid>
+                                </Border>
+                                <TextBlock Text="{Binding (Validation.Errors)[0].ErrorContent, ElementName=txtSellingPrice}"
+                                           Foreground="Red" FontSize="12" Margin="0,2,0,0" TextWrapping="Wrap">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock">
+                                            <Setter Property="Visibility" Value="Visible"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding (Validation.HasError), ElementName=txtSellingPrice}" Value="False">
+                                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
+                            </StackPanel>
+                        </Grid>
+
+                        <StackPanel Margin="0,0,0,15" Orientation="Vertical">
+                            <StackPanel Margin="10" VerticalAlignment="Center">
+                                <TextBlock Text="Image Upload (Optional)" FontWeight="SemiBold" FontSize="14" Foreground="#333" Margin="0,0,0,5"/>
+                                <Border BorderThickness="1" BorderBrush="#E0E0E0" CornerRadius="5" Background="#FAFAFA" Padding="5">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="auto"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Grid>
+                                            <TextBox x:Name="txtImagePath" Grid.Column="1" BorderThickness="0" Background="Transparent"
+                                                     VerticalContentAlignment="Center" Foreground="#757575" IsReadOnly="True"
+                                                     Text="{Binding ImagePathText}" Padding="5,0"/>
+                                            <TextBlock Text="No Image Selected yet" Foreground="Gray" VerticalAlignment="Center" Padding="8 0" Margin="7,0,0,0" IsHitTestVisible="False">
+                                                <TextBlock.Style>
+                                                    <Style TargetType="TextBlock">
+                                                        <Setter Property="Visibility" Value="Collapsed"/>
+                                                        <Style.Triggers>
+                                                            <DataTrigger Binding="{Binding Text, ElementName=txtImagePath}" Value="">
+                                                                <Setter Property="Visibility" Value="Visible"/>
+                                                            </DataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </TextBlock.Style>
+                                            </TextBlock>
+                                        </Grid>
+
+                                        <Button Content="Browse" Grid.Column="2" Padding="10,5" Background="#007BFF" Foreground="White"
+                                                BorderThickness="0" Cursor="Hand"
+                                                Command="{Binding SelectImageCommand}">
+                                            <Button.Resources>
+                                                <Style TargetType="Border">
+                                                    <Setter Property="CornerRadius" Value="3"/>
+                                                </Style>
+                                            </Button.Resources>
+                                        </Button>
+                                    </Grid>
+                                </Border>
+                            </StackPanel>
+                        </StackPanel>
+
+                        <StackPanel>
+                            <TextBlock Text="Description" Style="{StaticResource LabelStyle}"/>
+                            <Grid>
+                                <TextBox x:Name="txtDescription" Style="{StaticResource ModernInputStyle}" 
+                                         Height="100" TextWrapping="Wrap" VerticalContentAlignment="Top" Padding="10"
+                                         Text="{Binding CurrentProduct.Description,UpdateSourceTrigger=PropertyChanged}"/>
+                                <TextBlock Text="Product description..." Foreground="Gray" VerticalAlignment="Top" Padding="5 0" Margin="7,12,0,0" IsHitTestVisible="False">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock">
+                                            <Setter Property="Visibility" Value="Collapsed"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding Text, ElementName=txtDescription}" Value="">
+                                                    <Setter Property="Visibility" Value="Visible"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
+                            </Grid>
+                        </StackPanel>
+
+                    </StackPanel>
+                </ScrollViewer>
+
+                <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button Content="Cancel" Style="{StaticResource SecondaryButtonStyle}" Margin="0,0,10,0" Width="100"
+                            Command="{Binding CancelCommand}" 
+                            CommandParameter="{Binding ElementName=ProductWindow}"/>
+                    <Button Content="Add Product" Style="{StaticResource PrimaryButtonStyle}" Width="120"
+                            Command="{Binding SaveCommand}" 
+                            CommandParameter="{Binding ElementName=ProductWindow}"/>
+                </StackPanel>
+
+            </Grid>
+        </Border>
+
+        <Grid Background="#99FFFFFF" 
+              Visibility="{Binding IsBusy, Converter={StaticResource BoolToVis}}"
+              Panel.ZIndex="100">
+            <Border Background="White" CornerRadius="10" Padding="20" 
+                    HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="10" ShadowDepth="0" Color="#CCC" Opacity="0.5"/>
+                </Border.Effect>
+                <StackPanel>
+                    <ProgressBar IsIndeterminate="True" Width="40" Height="40" Margin="0,0,0,10" 
+                                 BorderThickness="0" Background="Transparent"/>
+                    <TextBlock Text="جاري الحفظ..." FontWeight="Bold" Foreground="{StaticResource Text_Active}" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Border>
         </Grid>
-    </Border>
+
+    </Grid>
 </Window>

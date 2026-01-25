@@ -84,6 +84,61 @@
       "DevExpress.Mvvm.CodeGenerators/22.1.1": {
         "type": "package"
       },
+      "Extended.Wpf.Toolkit/5.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/Xceed.Wpf.AvalonDock.Themes.Aero.dll": {},
+          "lib/net5.0/Xceed.Wpf.AvalonDock.Themes.Metro.dll": {},
+          "lib/net5.0/Xceed.Wpf.AvalonDock.Themes.VS2010.dll": {},
+          "lib/net5.0/Xceed.Wpf.AvalonDock.dll": {},
+          "lib/net5.0/Xceed.Wpf.Toolkit.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Xceed.Wpf.AvalonDock.Themes.Aero.dll": {},
+          "lib/net5.0/Xceed.Wpf.AvalonDock.Themes.Metro.dll": {},
+          "lib/net5.0/Xceed.Wpf.AvalonDock.Themes.VS2010.dll": {},
+          "lib/net5.0/Xceed.Wpf.AvalonDock.dll": {},
+          "lib/net5.0/Xceed.Wpf.Toolkit.dll": {}
+        },
+        "resource": {
+          "lib/net5.0/cs-CZ/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "cs-CZ"
+          },
+          "lib/net5.0/de/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net5.0/es/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net5.0/fr/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net5.0/hu/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "hu"
+          },
+          "lib/net5.0/it/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net5.0/ja-JP/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "ja-JP"
+          },
+          "lib/net5.0/pt-BR/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net5.0/ro/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "ro"
+          },
+          "lib/net5.0/ru/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net5.0/sv/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "sv"
+          },
+          "lib/net5.0/zh-Hans/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "zh-Hans"
+          }
+        }
+      },
       "MahApps.Metro.IconPacks/6.2.1": {
         "type": "package",
         "dependencies": {
@@ -2261,6 +2316,56 @@
         "devexpress.mvvm.codegenerators.nuspec",
         "tools/install.ps1",
         "tools/uninstall.ps1"
+      ]
+    },
+    "Extended.Wpf.Toolkit/5.0.0": {
+      "sha512": "8QStq5cQd+anGBbA5XXSlb/BxEk457xRQ/vraLXNvf5fHG1b4Bu4DOkvSqvvu9MLRUf+q29ceWsLRGtAw3CzDg==",
+      "type": "package",
+      "path": "extended.wpf.toolkit/5.0.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "Xceed_Logo_Retina-400x400.png",
+        "extended.wpf.toolkit.5.0.0.nupkg.sha512",
+        "extended.wpf.toolkit.nuspec",
+        "lib/net40/Xceed.Wpf.AvalonDock.Themes.Aero.dll",
+        "lib/net40/Xceed.Wpf.AvalonDock.Themes.Metro.dll",
+        "lib/net40/Xceed.Wpf.AvalonDock.Themes.VS2010.dll",
+        "lib/net40/Xceed.Wpf.AvalonDock.dll",
+        "lib/net40/Xceed.Wpf.Toolkit.dll",
+        "lib/net40/cs-CZ/Xceed.Wpf.AvalonDock.resources.dll",
+        "lib/net40/de/Xceed.Wpf.AvalonDock.resources.dll",
+        "lib/net40/es/Xceed.Wpf.AvalonDock.resources.dll",
+        "lib/net40/fr/Xceed.Wpf.AvalonDock.resources.dll",
+        "lib/net40/hu/Xceed.Wpf.AvalonDock.resources.dll",
+        "lib/net40/it/Xceed.Wpf.AvalonDock.resources.dll",
+        "lib/net40/ja-JP/Xceed.Wpf.AvalonDock.resources.dll",
+        "lib/net40/nl-BE/Xceed.Wpf.AvalonDock.resources.dll",
+        "lib/net40/pt-BR/Xceed.Wpf.AvalonDock.resources.dll",
+        "lib/net40/ro/Xceed.Wpf.AvalonDock.resources.dll",
+        "lib/net40/ru/Xceed.Wpf.AvalonDock.resources.dll",
+        "lib/net40/sv/Xceed.Wpf.AvalonDock.resources.dll",
+        "lib/net40/zh-Hans/Xceed.Wpf.AvalonDock.resources.dll",
+        "lib/net5.0/Xceed.Wpf.AvalonDock.Themes.Aero.dll",
+        "lib/net5.0/Xceed.Wpf.AvalonDock.Themes.Metro.dll",
+        "lib/net5.0/Xceed.Wpf.AvalonDock.Themes.VS2010.dll",
+        "lib/net5.0/Xceed.Wpf.AvalonDock.dll",
+        "lib/net5.0/Xceed.Wpf.Toolkit.dll",
+        "lib/net5.0/cs-CZ/Xceed.Wpf.AvalonDock.resources.dll",
+        "lib/net5.0/de/Xceed.Wpf.AvalonDock.resources.dll",
+        "lib/net5.0/es/Xceed.Wpf.AvalonDock.resources.dll",
+        "lib/net5.0/fr/Xceed.Wpf.AvalonDock.resources.dll",
+        "lib/net5.0/hu/Xceed.Wpf.AvalonDock.resources.dll",
+        "lib/net5.0/it/Xceed.Wpf.AvalonDock.resources.dll",
+        "lib/net5.0/ja-JP/Xceed.Wpf.AvalonDock.resources.dll",
+        "lib/net5.0/pt-BR/Xceed.Wpf.AvalonDock.resources.dll",
+        "lib/net5.0/ro/Xceed.Wpf.AvalonDock.resources.dll",
+        "lib/net5.0/ru/Xceed.Wpf.AvalonDock.resources.dll",
+        "lib/net5.0/sv/Xceed.Wpf.AvalonDock.resources.dll",
+        "lib/net5.0/zh-Hans/Xceed.Wpf.AvalonDock.resources.dll",
+        "tools/install.ps1"
       ]
     },
     "MahApps.Metro.IconPacks/6.2.1": {
@@ -4827,6 +4932,7 @@
       "BCrypt.Net-Next >= 4.0.3",
       "CommunityToolkit.Mvvm >= 8.4.0",
       "DevExpress.Mvvm.CodeGenerators >= 22.1.1",
+      "Extended.Wpf.Toolkit >= 5.0.0",
       "InventoryManagementSystem_BusinessLayer >= 1.0.0",
       "InventoryManagementSystem_DataAccessLayer >= 1.0.0",
       "InventoryManagementSystem_Model >= 1.0.0",
@@ -4844,11 +4950,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\4- Inventory Management System\\InventoryManagementSystem_PresentaionLayer\\InventoryManagementSystem_PresentaionLayer.csproj",
+      "projectUniqueName": "D:\\Projects\\New folder (2)\\Inventory Management System\\InventoryManagementSystem_PresentaionLayer\\InventoryManagementSystem_PresentaionLayer.csproj",
       "projectName": "InventoryManagementSystem_PresentaionLayer",
-      "projectPath": "D:\\Projects\\4- Inventory Management System\\InventoryManagementSystem_PresentaionLayer\\InventoryManagementSystem_PresentaionLayer.csproj",
+      "projectPath": "D:\\Projects\\New folder (2)\\Inventory Management System\\InventoryManagementSystem_PresentaionLayer\\InventoryManagementSystem_PresentaionLayer.csproj",
       "packagesPath": "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\4- Inventory Management System\\InventoryManagementSystem_PresentaionLayer\\obj\\",
+      "outputPath": "D:\\Projects\\New folder (2)\\Inventory Management System\\InventoryManagementSystem_PresentaionLayer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\DevExpress 25.1\\Components\\Offline Packages",
@@ -4873,14 +4979,14 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "D:\\Projects\\4- Inventory Management System\\InventoryManagementSystem_BusinessLayer\\InventoryManagementSystem_BusinessLayer.csproj": {
-              "projectPath": "D:\\Projects\\4- Inventory Management System\\InventoryManagementSystem_BusinessLayer\\InventoryManagementSystem_BusinessLayer.csproj"
+            "D:\\Projects\\New folder (2)\\Inventory Management System\\InventoryManagementSystem_BusinessLayer\\InventoryManagementSystem_BusinessLayer.csproj": {
+              "projectPath": "D:\\Projects\\New folder (2)\\Inventory Management System\\InventoryManagementSystem_BusinessLayer\\InventoryManagementSystem_BusinessLayer.csproj"
             },
-            "D:\\Projects\\4- Inventory Management System\\InventoryManagementSystem_DataAccessLayer\\InventoryManagementSystem_DataAccessLayer.csproj": {
-              "projectPath": "D:\\Projects\\4- Inventory Management System\\InventoryManagementSystem_DataAccessLayer\\InventoryManagementSystem_DataAccessLayer.csproj"
+            "D:\\Projects\\New folder (2)\\Inventory Management System\\InventoryManagementSystem_DataAccessLayer\\InventoryManagementSystem_DataAccessLayer.csproj": {
+              "projectPath": "D:\\Projects\\New folder (2)\\Inventory Management System\\InventoryManagementSystem_DataAccessLayer\\InventoryManagementSystem_DataAccessLayer.csproj"
             },
-            "D:\\Projects\\4- Inventory Management System\\InventoryManagementSystem_Model\\InventoryManagementSystem_Model.csproj": {
-              "projectPath": "D:\\Projects\\4- Inventory Management System\\InventoryManagementSystem_Model\\InventoryManagementSystem_Model.csproj"
+            "D:\\Projects\\New folder (2)\\Inventory Management System\\InventoryManagementSystem_Model\\InventoryManagementSystem_Model.csproj": {
+              "projectPath": "D:\\Projects\\New folder (2)\\Inventory Management System\\InventoryManagementSystem_Model\\InventoryManagementSystem_Model.csproj"
             }
           }
         }
@@ -4912,6 +5018,10 @@
           "DevExpress.Mvvm.CodeGenerators": {
             "target": "Package",
             "version": "[22.1.1, )"
+          },
+          "Extended.Wpf.Toolkit": {
+            "target": "Package",
+            "version": "[5.0.0, )"
           },
           "MahApps.Metro.IconPacks": {
             "target": "Package",

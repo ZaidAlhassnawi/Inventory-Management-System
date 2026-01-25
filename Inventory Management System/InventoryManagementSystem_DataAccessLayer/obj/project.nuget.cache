@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1rlLn4qCOag=",
+  "dgSpecHash": "ttldVpnQyfQ=",
   "success": true,
-  "projectFilePath": "D:\\Projects\\4- Inventory Management System\\InventoryManagementSystem_DataAccessLayer\\InventoryManagementSystem_DataAccessLayer.csproj",
+  "projectFilePath": "D:\\Projects\\New folder (2)\\Inventory Management System\\InventoryManagementSystem_DataAccessLayer\\InventoryManagementSystem_DataAccessLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\azure.core\\1.47.1\\azure.core.1.47.1.nupkg.sha512",
     "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\azure.identity\\1.14.2\\azure.identity.1.14.2.nupkg.sha512",

@@ -53,8 +53,8 @@ namespace InventoryManagementSystem_PresentaionLayer.Products_W {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/InventoryManagementSystem_PresentaionLayer;component/products_w/products_w/produ" +
-                    "ct_w1.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/InventoryManagementSystem_PresentaionLayer;V1.0.0.0;component/products_w/product" +
+                    "s_w/product_w1.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Products_W\Products_w\Product_w1.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

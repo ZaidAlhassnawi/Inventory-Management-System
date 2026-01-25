@@ -2046,11 +2046,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\4- Inventory Management System\\InventoryManagementSystem_Model\\InventoryManagementSystem_Model.csproj",
+      "projectUniqueName": "D:\\Projects\\New folder (2)\\Inventory Management System\\InventoryManagementSystem_Model\\InventoryManagementSystem_Model.csproj",
       "projectName": "InventoryManagementSystem_Model",
-      "projectPath": "D:\\Projects\\4- Inventory Management System\\InventoryManagementSystem_Model\\InventoryManagementSystem_Model.csproj",
+      "projectPath": "D:\\Projects\\New folder (2)\\Inventory Management System\\InventoryManagementSystem_Model\\InventoryManagementSystem_Model.csproj",
       "packagesPath": "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\4- Inventory Management System\\InventoryManagementSystem_Model\\obj\\",
+      "outputPath": "D:\\Projects\\New folder (2)\\Inventory Management System\\InventoryManagementSystem_Model\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\DevExpress 25.1\\Components\\Offline Packages",

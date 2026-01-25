@@ -39,8 +39,8 @@ namespace InventoryManagementSystem_DataAccessLayer.ProductRepository
                 command.Parameters.AddWithValue("@Stock", obj.Stock);
                 command.Parameters.AddWithValue("@CostPrice", obj.CostPrice);
                 command.Parameters.AddWithValue("@SellingPrice", obj.SellingPrice);
-                command.Parameters.AddWithValue("@ImageURL", obj.ImageURL);
-                command.Parameters.AddWithValue("@Description", obj.Description);
+                command.Parameters.AddWithValue("@ImageURL", obj.ImageURL?? "");
+                command.Parameters.AddWithValue("@Description", obj.Description?? "");
 
 
 

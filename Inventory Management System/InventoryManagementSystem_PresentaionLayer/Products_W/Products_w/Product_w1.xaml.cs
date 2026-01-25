@@ -21,10 +21,10 @@ namespace InventoryManagementSystem_PresentaionLayer.Products_W
     /// </summary>
     public partial class Product_w1 : Page
     {
-        public Product_w1()
+        public Product_w1(Product_w1ViewModel vm)
         {
             InitializeComponent();
-            this.DataContext = new Product_w1ViewModel() ;
+            this.DataContext = vm;
         }
     }
 }

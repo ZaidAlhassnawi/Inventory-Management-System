@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KjkxveFXVmY=",
+  "dgSpecHash": "RbJTX45ji0s=",
   "success": true,
-  "projectFilePath": "D:\\Projects\\4- Inventory Management System\\InventoryManagementSystem_PresentaionLayer\\InventoryManagementSystem_PresentaionLayer.csproj",
+  "projectFilePath": "D:\\Projects\\New folder (2)\\Inventory Management System\\InventoryManagementSystem_PresentaionLayer\\InventoryManagementSystem_PresentaionLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\azure.core\\1.47.1\\azure.core.1.47.1.nupkg.sha512",
     "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\azure.identity\\1.14.2\\azure.identity.1.14.2.nupkg.sha512",
@@ -10,6 +10,7 @@
     "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\communitytoolkit.mvvm\\8.4.0\\communitytoolkit.mvvm.8.4.0.nupkg.sha512",
     "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\dapper\\2.1.66\\dapper.2.1.66.nupkg.sha512",
     "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\devexpress.mvvm.codegenerators\\22.1.1\\devexpress.mvvm.codegenerators.22.1.1.nupkg.sha512",
+    "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\extended.wpf.toolkit\\5.0.0\\extended.wpf.toolkit.5.0.0.nupkg.sha512",
     "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\mahapps.metro.iconpacks\\6.2.1\\mahapps.metro.iconpacks.6.2.1.nupkg.sha512",
     "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\mahapps.metro.iconpacks.bootstrapicons\\6.2.1\\mahapps.metro.iconpacks.bootstrapicons.6.2.1.nupkg.sha512",
     "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\mahapps.metro.iconpacks.boxicons\\6.2.1\\mahapps.metro.iconpacks.boxicons.6.2.1.nupkg.sha512",

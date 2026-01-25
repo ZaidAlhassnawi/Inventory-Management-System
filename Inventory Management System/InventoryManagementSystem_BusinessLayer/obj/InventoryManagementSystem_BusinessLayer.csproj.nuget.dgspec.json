@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\4- Inventory Management System\\InventoryManagementSystem_BusinessLayer\\InventoryManagementSystem_BusinessLayer.csproj": {}
+    "D:\\Projects\\New folder (2)\\Inventory Management System\\InventoryManagementSystem_BusinessLayer\\InventoryManagementSystem_BusinessLayer.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\4- Inventory Management System\\InventoryManagementSystem_BusinessLayer\\InventoryManagementSystem_BusinessLayer.csproj": {
+    "D:\\Projects\\New folder (2)\\Inventory Management System\\InventoryManagementSystem_BusinessLayer\\InventoryManagementSystem_BusinessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\4- Inventory Management System\\InventoryManagementSystem_BusinessLayer\\InventoryManagementSystem_BusinessLayer.csproj",
+        "projectUniqueName": "D:\\Projects\\New folder (2)\\Inventory Management System\\InventoryManagementSystem_BusinessLayer\\InventoryManagementSystem_BusinessLayer.csproj",
         "projectName": "InventoryManagementSystem_BusinessLayer",
-        "projectPath": "D:\\Projects\\4- Inventory Management System\\InventoryManagementSystem_BusinessLayer\\InventoryManagementSystem_BusinessLayer.csproj",
+        "projectPath": "D:\\Projects\\New folder (2)\\Inventory Management System\\InventoryManagementSystem_BusinessLayer\\InventoryManagementSystem_BusinessLayer.csproj",
         "packagesPath": "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\4- Inventory Management System\\InventoryManagementSystem_BusinessLayer\\obj\\",
+        "outputPath": "D:\\Projects\\New folder (2)\\Inventory Management System\\InventoryManagementSystem_BusinessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\DevExpress 25.1\\Components\\Offline Packages",
@@ -36,11 +36,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Projects\\4- Inventory Management System\\InventoryManagementSystem_DataAccessLayer\\InventoryManagementSystem_DataAccessLayer.csproj": {
-                "projectPath": "D:\\Projects\\4- Inventory Management System\\InventoryManagementSystem_DataAccessLayer\\InventoryManagementSystem_DataAccessLayer.csproj"
+              "D:\\Projects\\New folder (2)\\Inventory Management System\\InventoryManagementSystem_DataAccessLayer\\InventoryManagementSystem_DataAccessLayer.csproj": {
+                "projectPath": "D:\\Projects\\New folder (2)\\Inventory Management System\\InventoryManagementSystem_DataAccessLayer\\InventoryManagementSystem_DataAccessLayer.csproj"
               },
-              "D:\\Projects\\4- Inventory Management System\\InventoryManagementSystem_Model\\InventoryManagementSystem_Model.csproj": {
-                "projectPath": "D:\\Projects\\4- Inventory Management System\\InventoryManagementSystem_Model\\InventoryManagementSystem_Model.csproj"
+              "D:\\Projects\\New folder (2)\\Inventory Management System\\InventoryManagementSystem_Model\\InventoryManagementSystem_Model.csproj": {
+                "projectPath": "D:\\Projects\\New folder (2)\\Inventory Management System\\InventoryManagementSystem_Model\\InventoryManagementSystem_Model.csproj"
               }
             }
           }
@@ -94,14 +94,14 @@
         }
       }
     },
-    "D:\\Projects\\4- Inventory Management System\\InventoryManagementSystem_DataAccessLayer\\InventoryManagementSystem_DataAccessLayer.csproj": {
+    "D:\\Projects\\New folder (2)\\Inventory Management System\\InventoryManagementSystem_DataAccessLayer\\InventoryManagementSystem_DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\4- Inventory Management System\\InventoryManagementSystem_DataAccessLayer\\InventoryManagementSystem_DataAccessLayer.csproj",
+        "projectUniqueName": "D:\\Projects\\New folder (2)\\Inventory Management System\\InventoryManagementSystem_DataAccessLayer\\InventoryManagementSystem_DataAccessLayer.csproj",
         "projectName": "InventoryManagementSystem_DataAccessLayer",
-        "projectPath": "D:\\Projects\\4- Inventory Management System\\InventoryManagementSystem_DataAccessLayer\\InventoryManagementSystem_DataAccessLayer.csproj",
+        "projectPath": "D:\\Projects\\New folder (2)\\Inventory Management System\\InventoryManagementSystem_DataAccessLayer\\InventoryManagementSystem_DataAccessLayer.csproj",
         "packagesPath": "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\4- Inventory Management System\\InventoryManagementSystem_DataAccessLayer\\obj\\",
+        "outputPath": "D:\\Projects\\New folder (2)\\Inventory Management System\\InventoryManagementSystem_DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\DevExpress 25.1\\Components\\Offline Packages",
@@ -126,8 +126,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Projects\\4- Inventory Management System\\InventoryManagementSystem_Model\\InventoryManagementSystem_Model.csproj": {
-                "projectPath": "D:\\Projects\\4- Inventory Management System\\InventoryManagementSystem_Model\\InventoryManagementSystem_Model.csproj"
+              "D:\\Projects\\New folder (2)\\Inventory Management System\\InventoryManagementSystem_Model\\InventoryManagementSystem_Model.csproj": {
+                "projectPath": "D:\\Projects\\New folder (2)\\Inventory Management System\\InventoryManagementSystem_Model\\InventoryManagementSystem_Model.csproj"
               }
             }
           }
@@ -203,14 +203,14 @@
         }
       }
     },
-    "D:\\Projects\\4- Inventory Management System\\InventoryManagementSystem_Model\\InventoryManagementSystem_Model.csproj": {
+    "D:\\Projects\\New folder (2)\\Inventory Management System\\InventoryManagementSystem_Model\\InventoryManagementSystem_Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\4- Inventory Management System\\InventoryManagementSystem_Model\\InventoryManagementSystem_Model.csproj",
+        "projectUniqueName": "D:\\Projects\\New folder (2)\\Inventory Management System\\InventoryManagementSystem_Model\\InventoryManagementSystem_Model.csproj",
         "projectName": "InventoryManagementSystem_Model",
-        "projectPath": "D:\\Projects\\4- Inventory Management System\\InventoryManagementSystem_Model\\InventoryManagementSystem_Model.csproj",
+        "projectPath": "D:\\Projects\\New folder (2)\\Inventory Management System\\InventoryManagementSystem_Model\\InventoryManagementSystem_Model.csproj",
         "packagesPath": "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\4- Inventory Management System\\InventoryManagementSystem_Model\\obj\\",
+        "outputPath": "D:\\Projects\\New folder (2)\\Inventory Management System\\InventoryManagementSystem_Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\DevExpress 25.1\\Components\\Offline Packages",

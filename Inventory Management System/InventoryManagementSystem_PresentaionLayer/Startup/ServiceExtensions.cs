@@ -1,8 +1,10 @@
 ﻿using InventoryManagementSystem_BusinessLayer.CategoryServices;
 using InventoryManagementSystem_BusinessLayer.ProductServices;
+using InventoryManagementSystem_BusinessLayer.SupplierServices;
 using InventoryManagementSystem_BusinessLayer.UserServices;
 using InventoryManagementSystem_DataAccessLayer.CategoreyRepository;
 using InventoryManagementSystem_DataAccessLayer.ProductRepository;
+using InventoryManagementSystem_DataAccessLayer.SupplierRepository;
 using InventoryManagementSystem_DataAccessLayer.UserRepo;
 using InventoryManagementSystem_Model.Interfaces;
 using InventoryManagementSystem_Model.Models;
@@ -54,6 +56,10 @@ namespace InventoryManagementSystem_PresentaionLayer.Startup
             services.AddTransient<IGetAllRepository<CategoryDTO>, GetAllCategoreiesRepository>();
 
 
+            //Supplier Repostiory
+            services.AddTransient<IGetAllRepository<SupplierDTO>, GetAllSuppliersRepository>();
+
+
             return services;
         }
 
@@ -74,6 +80,9 @@ namespace InventoryManagementSystem_PresentaionLayer.Startup
 
             // -- Category Services --
             services.AddTransient<IGetAllService<CategoryDTO>, GetAllCategoreiesService>();
+
+            //-- Category Serivces --
+            services.AddTransient<IGetAllService<SupplierDTO>, GetAllSuppliersService>();
 
             return services;
         }

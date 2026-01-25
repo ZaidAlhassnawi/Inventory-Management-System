@@ -1,10 +1,13 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using InventoryManagementSystem_Model.Interfaces;
+using InventoryManagementSystem_Model.Models;
 using InventoryManagementSystem_PresentaionLayer.MainSideBar;
 using InventoryManagementSystem_PresentaionLayer.Products_W.Products_w;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,8 +18,49 @@ namespace InventoryManagementSystem_PresentaionLayer.Products_W.Products_V
     public partial class Product_w1ViewModel: ObservableValidator
     {
 
+        private readonly IGetAllService<ProductDTO> _ProductRepo;
+
+        private ObservableCollection<ProductDTO> _ProductList;
+        public ObservableCollection<ProductDTO> ProductList
+        {
+            get { return _ProductList; }
+            set
+            {
+                _ProductList = value;
+                OnPropertyChanged();
+            }
+        }
 
 
+        [ObservableProperty]
+        private bool isBusy;
+
+        public Product_w1ViewModel(IGetAllService<ProductDTO> ProductRepo)
+        {
+            _ProductRepo = ProductRepo;
+
+
+            LoadProducts();
+        }
+
+
+        private async void LoadProducts()
+        {
+            IsBusy = true; 
+            try
+            {
+                var productList = await _ProductRepo.GetAllAsync();
+                ProductList = new ObservableCollection<ProductDTO>(productList);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                IsBusy = false; 
+            }
+        }
 
 
         [RelayCommand]
