@@ -1,8 +1,9 @@
-﻿using InventoryManagementSystem_Model.Interfaces;
+﻿using Dapper;
+using InventoryManagementSystem_Model.Interfaces;
 using InventoryManagementSystem_Model.Models;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
-using Dapper;
+using Microsoft.Extensions.Options;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -15,9 +16,9 @@ namespace InventoryManagementSystem_DataAccessLayer.SupplierRepository
     {
         private readonly string _connectionString;
 
-        public GetAllSuppliersRepository (IConfiguration configuration)
+        public GetAllSuppliersRepository (IOptions<DataAccessSettings> options)
         {
-            _connectionString = configuration.GetConnectionString("DBConnectionString");
+            _connectionString = options.Value.DBConnectionString;
         }
 
         public async Task<List<SupplierDTO>> GetAllAsync()

@@ -2,6 +2,7 @@
 using InventoryManagementSystem_Model.Models;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -13,13 +14,11 @@ namespace InventoryManagementSystem_DataAccessLayer.ProductRepository
 {
     public class AddProductRepostiory : IAddRepository<ProductDTO>
     {
-        // متغير خاص لتخزين نص الاتصال لاستخدامه داخل الكلاس
         private readonly string _connectionString;
 
-        // الحقن يتم هنا في الكونستركتر
-        public AddProductRepostiory(IConfiguration configuration)
+        public AddProductRepostiory(IOptions<DataAccessSettings> options)
         {
-            _connectionString = configuration.GetConnectionString("DBConnectionString");
+            _connectionString = options.Value.DBConnectionString;
         }
         
         public async Task<int> AddAsync(ProductDTO obj)

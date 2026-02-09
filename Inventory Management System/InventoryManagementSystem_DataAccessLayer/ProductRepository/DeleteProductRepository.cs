@@ -3,6 +3,7 @@ using InventoryManagementSystem_Model.Interfaces;
 using InventoryManagementSystem_Model.Models;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -16,9 +17,9 @@ namespace InventoryManagementSystem_DataAccessLayer.ProductRepository
     {
         private readonly string _connectionString;
 
-        public DeleteProductRepository(IConfiguration configuration)
+        public DeleteProductRepository(IOptions<DataAccessSettings> options)
         {
-            _connectionString = configuration.GetConnectionString("DBConnectionString");
+            _connectionString = options.Value.DBConnectionString;
         }
 
         public async Task<bool> DelteAsync(int ID)

@@ -2,6 +2,7 @@
 using InventoryManagementSystem_Model.Models;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,9 +15,9 @@ namespace InventoryManagementSystem_DataAccessLayer.ProductRepository
     {
         private readonly string _connectionString;
 
-        public GetAllProductsRepository(IConfiguration configuration)
+        public GetAllProductsRepository(IOptions<DataAccessSettings> options)
         {
-            _connectionString = configuration.GetConnectionString("DBConnectionString");
+            _connectionString = options.Value.DBConnectionString;
         }
 
         public async Task<List<ProductDTO>> GetAllAsync()
@@ -43,7 +44,7 @@ namespace InventoryManagementSystem_DataAccessLayer.ProductRepository
                             ProductID = reader.GetInt32(reader.GetOrdinal("ProductID")),
                             ProductName = reader.GetString(reader.GetOrdinal("ProductName")),
                             SKU = reader.GetString(reader.GetOrdinal("SKU")),
-                            CategoryName = reader.GetString(reader.GetOrdinal("CategoryName")),
+                            CategoryName = reader.GetString(reader.GetOrdinal("CategoreName")),
                             SupplierName = reader.GetString(reader.GetOrdinal("SupplierName")),
                             Stock = reader.GetInt32(reader.GetOrdinal("Stock")),
                             CostPrice = reader.GetDecimal(reader.GetOrdinal("CostPrice")),

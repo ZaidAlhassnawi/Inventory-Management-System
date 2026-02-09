@@ -1,7 +1,20 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Projects\\New folder (2)\\Inventory Management System\\InventoryManagementSystem_PresentaionLayer\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0B864B52-41DD-4E47-BABE-AEBD204DE814}|InventoryManagementSystem_PresentaionLayer.csproj|d:\\projects\\new folder (2)\\inventory management system\\inventorymanagementsystem_presentaionlayer\\category\\viewmodecategory\\categoryviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B864B52-41DD-4E47-BABE-AEBD204DE814}|InventoryManagementSystem_PresentaionLayer.csproj|solutionrelative:category\\viewmodecategory\\categoryviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B864B52-41DD-4E47-BABE-AEBD204DE814}|InventoryManagementSystem_PresentaionLayer.csproj|d:\\projects\\new folder (2)\\inventory management system\\inventorymanagementsystem_presentaionlayer\\category\\viewmodecategory\\addeditcategoryviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B864B52-41DD-4E47-BABE-AEBD204DE814}|InventoryManagementSystem_PresentaionLayer.csproj|solutionrelative:category\\viewmodecategory\\addeditcategoryviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B864B52-41DD-4E47-BABE-AEBD204DE814}|InventoryManagementSystem_PresentaionLayer.csproj|d:\\projects\\new folder (2)\\inventory management system\\inventorymanagementsystem_presentaionlayer\\category\\viewcategory\\categorywindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0B864B52-41DD-4E47-BABE-AEBD204DE814}|InventoryManagementSystem_PresentaionLayer.csproj|solutionrelative:category\\viewcategory\\categorywindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +22,51 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AddEditCategoryViewModel.cs",
+              "DocumentMoniker": "D:\\Projects\\New folder (2)\\Inventory Management System\\InventoryManagementSystem_PresentaionLayer\\Category\\ViewModeCategory\\AddEditCategoryViewModel.cs",
+              "RelativeDocumentMoniker": "Category\\ViewModeCategory\\AddEditCategoryViewModel.cs",
+              "ToolTip": "D:\\Projects\\New folder (2)\\Inventory Management System\\InventoryManagementSystem_PresentaionLayer\\Category\\ViewModeCategory\\AddEditCategoryViewModel.cs",
+              "RelativeToolTip": "Category\\ViewModeCategory\\AddEditCategoryViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-08T19:34:15.964Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CategoryViewModel.cs",
+              "DocumentMoniker": "D:\\Projects\\New folder (2)\\Inventory Management System\\InventoryManagementSystem_PresentaionLayer\\Category\\ViewModeCategory\\CategoryViewModel.cs",
+              "RelativeDocumentMoniker": "Category\\ViewModeCategory\\CategoryViewModel.cs",
+              "ToolTip": "D:\\Projects\\New folder (2)\\Inventory Management System\\InventoryManagementSystem_PresentaionLayer\\Category\\ViewModeCategory\\CategoryViewModel.cs",
+              "RelativeToolTip": "Category\\ViewModeCategory\\CategoryViewModel.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAqwDYAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T20:55:57.612Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CategoryWindow.xaml",
+              "DocumentMoniker": "D:\\Projects\\New folder (2)\\Inventory Management System\\InventoryManagementSystem_PresentaionLayer\\Category\\ViewCategory\\CategoryWindow.xaml",
+              "RelativeDocumentMoniker": "Category\\ViewCategory\\CategoryWindow.xaml",
+              "ToolTip": "D:\\Projects\\New folder (2)\\Inventory Management System\\InventoryManagementSystem_PresentaionLayer\\Category\\ViewCategory\\CategoryWindow.xaml",
+              "RelativeToolTip": "Category\\ViewCategory\\CategoryWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-02-07T20:30:37.116Z"
             }
           ]
         }

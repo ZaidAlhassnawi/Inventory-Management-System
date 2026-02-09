@@ -2,6 +2,7 @@
 using InventoryManagementSystem_Model.Models;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -16,9 +17,9 @@ namespace InventoryManagementSystem_DataAccessLayer.UserRepo
     {
         private readonly string _connectionString;
 
-        public GetUserByID(IConfiguration configuration)
+        public GetUserByID(IOptions<DataAccessSettings> options)
         {
-            _connectionString = configuration.GetConnectionString("DBConnectionString");
+            _connectionString = options.Value.DBConnectionString;
         }
         public async Task<User> GetByIDAsync(int ID)
         {

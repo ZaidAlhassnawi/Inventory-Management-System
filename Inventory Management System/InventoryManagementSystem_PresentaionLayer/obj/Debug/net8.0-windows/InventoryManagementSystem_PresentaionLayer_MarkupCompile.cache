@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 D:\Projects\4- Inventory Management System\InventoryManagementSystem_PresentaionLayer\App.xaml
-12904913956
+15-1368052013
 
-182109760435
-2981005707528
-MainSideBar\Window1.xaml;Products_W\Products_w\AddEditProducts.xaml;Products_W\Products_w\Product_w1.xaml;Resources\ColorsDictionary.xaml;Resources\Fonts.xaml;Resources\Icons.xaml;Resources\ProductsStyles.xaml;Resources\Styles.xaml;Resources\StylesDictionary.xaml;User_W\ViewUser\UserSingin.xaml;User_W\ViewUser\UserSingnUp.xaml;User_W\ViewUser\UserWindow.xaml;
+23-1923145589
+298-1363600854
+Category\ViewCategory\AddEditCategoryWindow.xaml;Category\ViewCategory\CategoryWindow.xaml;MainSideBar\Window1.xaml;Products_W\Products_w\AddEditProducts.xaml;Products_W\Products_w\Product_w1.xaml;Resources\CategoryStyles.xaml;Resources\ColorsDictionary.xaml;Resources\Fonts.xaml;Resources\Icons.xaml;Resources\ProductsStyles.xaml;Resources\Styles.xaml;Resources\StylesDictionary.xaml;User_W\ViewUser\UserSingin.xaml;User_W\ViewUser\UserSingnUp.xaml;User_W\ViewUser\UserWindow.xaml;
 
-True
+False
 

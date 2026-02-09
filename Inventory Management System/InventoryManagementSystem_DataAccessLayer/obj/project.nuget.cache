@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ttldVpnQyfQ=",
+  "dgSpecHash": "8F4bGwHRtdo=",
   "success": true,
   "projectFilePath": "D:\\Projects\\New folder (2)\\Inventory Management System\\InventoryManagementSystem_DataAccessLayer\\InventoryManagementSystem_DataAccessLayer.csproj",
   "expectedPackageFiles": [
@@ -17,12 +17,12 @@
     "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\10.0.2\\microsoft.extensions.configuration.abstractions.10.0.2.nupkg.sha512",
     "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\microsoft.extensions.configuration.fileextensions\\10.0.2\\microsoft.extensions.configuration.fileextensions.10.0.2.nupkg.sha512",
     "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\microsoft.extensions.configuration.json\\10.0.2\\microsoft.extensions.configuration.json.10.0.2.nupkg.sha512",
-    "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.2\\microsoft.extensions.dependencyinjection.abstractions.10.0.2.nupkg.sha512",
     "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\10.0.2\\microsoft.extensions.fileproviders.abstractions.10.0.2.nupkg.sha512",
     "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\microsoft.extensions.fileproviders.physical\\10.0.2\\microsoft.extensions.fileproviders.physical.10.0.2.nupkg.sha512",
     "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\10.0.2\\microsoft.extensions.filesystemglobbing.10.0.2.nupkg.sha512",
     "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.3\\microsoft.extensions.logging.abstractions.8.0.3.nupkg.sha512",
-    "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\microsoft.extensions.options\\8.0.2\\microsoft.extensions.options.8.0.2.nupkg.sha512",
+    "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\microsoft.extensions.options\\10.0.2\\microsoft.extensions.options.10.0.2.nupkg.sha512",
     "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\microsoft.extensions.primitives\\10.0.2\\microsoft.extensions.primitives.10.0.2.nupkg.sha512",
     "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\microsoft.identity.client\\4.73.1\\microsoft.identity.client.4.73.1.nupkg.sha512",
     "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\microsoft.identity.client.extensions.msal\\4.73.1\\microsoft.identity.client.extensions.msal.4.73.1.nupkg.sha512",
@@ -45,10 +45,7 @@
     "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\system.security.cryptography.pkcs\\8.0.1\\system.security.cryptography.pkcs.8.0.1.nupkg.sha512",
     "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\system.security.cryptography.protecteddata\\8.0.0\\system.security.cryptography.protecteddata.8.0.0.nupkg.sha512",
     "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\system.text.encodings.web\\10.0.2\\system.text.encodings.web.10.0.2.nupkg.sha512",
-    "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\system.text.json\\10.0.2\\system.text.json.10.0.2.nupkg.sha512",
-    "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.23\\microsoft.windowsdesktop.app.ref.8.0.23.nupkg.sha512",
-    "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.23\\microsoft.netcore.app.ref.8.0.23.nupkg.sha512",
-    "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.23\\microsoft.aspnetcore.app.ref.8.0.23.nupkg.sha512"
+    "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\system.text.json\\10.0.2\\system.text.json.10.0.2.nupkg.sha512"
   ],
   "logs": []
 }

@@ -165,7 +165,10 @@ namespace InventoryManagementSystem_PresentaionLayer.Products_W.Products_V
                 MessageBox.Show("Product saved successfully!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
                     
                 if (parameter is Window currentWindow)
+                {
+                    currentWindow.DialogResult = true;
                     currentWindow.Close();
+                }
 
             }
             catch (Exception ex)

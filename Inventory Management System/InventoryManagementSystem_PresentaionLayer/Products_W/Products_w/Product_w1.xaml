@@ -8,6 +8,7 @@
       d:DesignHeight="800" d:DesignWidth="1200"
       Background="{StaticResource Bg_Main}">
 
+   
 
     <ScrollViewer VerticalScrollBarVisibility="Auto">
         <StackPanel Margin="30">
@@ -98,71 +99,110 @@
                     <TextBlock Text="Products (3)" Margin="20,20,0,5" FontWeight="Bold"/>
                     <TextBlock Text="List of all products in your inventory" Margin="20,0,0,20" Foreground="{StaticResource SecondaryTextBrush}" FontSize="12"/>
 
-                    <DataGrid AutoGenerateColumns="False" BorderThickness="0" Background="White" RowHeaderWidth="0" 
-                              CanUserAddRows="False" GridLinesVisibility="Horizontal" HorizontalGridLinesBrush="#F3F4F6"
-                              RowHeight="60" Padding="10">
+                    <Grid Background="White">
 
-                        <DataGrid.Resources>
-                            <Style TargetType="DataGridColumnHeader">
-                                <Setter Property="Background" Value="Transparent"/>
-                                <Setter Property="Foreground" Value="#6B7280"/>
-                                <Setter Property="FontWeight" Value="SemiBold"/>
-                                <Setter Property="Padding" Value="10"/>
-                                <Setter Property="HorizontalContentAlignment" Value="Left"/>
-                            </Style>
-                            <Style TargetType="DataGridCell">
-                                <Setter Property="BorderThickness" Value="0"/>
-                                <Setter Property="VerticalAlignment" Value="Center"/>
-                            </Style>
-                        </DataGrid.Resources>
+                        <DataGrid x:Name="membersDataGrid"
+                                  ItemsSource="{Binding ProductList}"
+                                  Style="{DynamicResource DataGridStyle1}"
+                                  RowStyle="{DynamicResource DataGridRowStyle1}"
+                                  CellStyle="{DynamicResource DataGridCellStyle1}"
+                                  ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}"
+                                  RowHeight="60" BorderThickness="0" Background="Transparent">
 
-                        <DataGrid.Columns>
-                            <DataGridTemplateColumn Header="Product" Width="2*">
-                                <DataGridTemplateColumn.CellTemplate>
-                                    <DataTemplate>
-                                        <StackPanel Orientation="Horizontal" Margin="10,0">
-                                            <Border Width="40" Height="40" CornerRadius="4" Background="#F3F4F6" Margin="0,0,10,0">
-                                                <TextBlock Text="📷" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                            </Border>
-                                            <StackPanel VerticalAlignment="Center">
-                                                <TextBlock Text="{Binding Name}" FontWeight="Bold" FontSize="13"/>
-                                                <TextBlock Text="{Binding Description}" FontSize="11" Foreground="#6B7280"/>
+                            <DataGrid.Columns>
+
+                                <DataGridTemplateColumn Header="Product" Width="2*">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Border Width="48" Height="48" CornerRadius="8" Background="#F3F4F6" Margin="0,0,12,0"
+                                                        ClipToBounds="True">
+
+                                                    <Image Stretch="UniformToFill"
+                                                           Source="{Binding ImageURL,
+                                                           Converter={StaticResource PathToImageConverter},
+                                                           TargetNullValue=/Assets/no-image.png,
+                                                           FallbackValue=/Assets/no-image.png}" />
+                                                </Border>
+                                                <StackPanel VerticalAlignment="Center">
+                                                    <TextBlock Text="{Binding ProductName}" FontWeight="Bold" FontSize="14"/>
+                                                    <TextBlock Text="{Binding Description}" FontSize="12" Opacity="0.7" Margin="0,2,0,0"/>
+                                                </StackPanel>
                                             </StackPanel>
-                                        </StackPanel>
-                                    </DataTemplate>
-                                </DataGridTemplateColumn.CellTemplate>
-                            </DataGridTemplateColumn>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                    
+                                </DataGridTemplateColumn>
 
-                            <DataGridTextColumn Header="SKU" Binding="{Binding SKU}" Width="*"/>
-                            <DataGridTextColumn Header="Category" Binding="{Binding Category}" Width="*"/>
-                            <DataGridTextColumn Header="Supplier" Binding="{Binding Supplier}" Width="1.5*"/>
+                                <DataGridTextColumn Header="SKU" Binding="{Binding SKU}" Width="*"/>
 
-                            <DataGridTemplateColumn Header="Stock" Width="*">
-                                <DataGridTemplateColumn.CellTemplate>
-                                    <DataTemplate>
-                                        <Border Background="Black" CornerRadius="4" Padding="8,4" HorizontalAlignment="Left" VerticalAlignment="Center">
-                                            <TextBlock Text="{Binding Stock}" Foreground="White" FontSize="11" FontWeight="Bold"/>
-                                        </Border>
-                                    </DataTemplate>
-                                </DataGridTemplateColumn.CellTemplate>
-                            </DataGridTemplateColumn>
+                                <DataGridTextColumn Header="Category" Binding="{Binding CategoryName}" Width="*"/>
 
-                            <DataGridTextColumn Header="Cost Price" Binding="{Binding CostPrice}" Width="*"/>
-                            <DataGridTextColumn Header="Selling Price" Binding="{Binding SellingPrice}" Width="*"/>
+                                <DataGridTextColumn Header="Supplier" Binding="{Binding SupplierName}" Width="1.5*"/>
 
-                            <DataGridTemplateColumn Header="Actions" Width="Auto">
-                                <DataGridTemplateColumn.CellTemplate>
-                                    <DataTemplate>
-                                        <StackPanel Orientation="Horizontal">
-                                            <Button Content="✏" Width="30" Height="30" Margin="0,0,5,0" Background="Transparent" BorderBrush="#E5E7EB" BorderThickness="1"/>
-                                            <Button Content="🗑" Width="30" Height="30" Background="Transparent" BorderBrush="#E5E7EB" BorderThickness="1"/>
-                                        </StackPanel>
-                                    </DataTemplate>
-                                </DataGridTemplateColumn.CellTemplate>
-                            </DataGridTemplateColumn>
-                        </DataGrid.Columns>
+                                <DataGridTemplateColumn Header="Stock" Width="*">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Border Background="#111827" CornerRadius="12" Padding="10,4" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                                <TextBlock Text="{Binding Stock}" Foreground="White" FontSize="11" FontWeight="Bold"/>
+                                            </Border>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
 
-                    </DataGrid>
+                                <DataGridTextColumn Header="Cost Price" Binding="{Binding CostPrice, StringFormat=C}" Width="*">
+                                    <DataGridTextColumn.ElementStyle>
+                                        <Style TargetType="TextBlock">
+                                            <Setter Property="HorizontalAlignment" Value="Center" />
+                                        </Style>
+                                    </DataGridTextColumn.ElementStyle>
+                                </DataGridTextColumn>
+
+                                <DataGridTextColumn Header="Selling Price" Binding="{Binding SellingPrice, StringFormat=C}" Width="*">
+                                    <DataGridTextColumn.ElementStyle>
+                                        <Style TargetType="TextBlock">
+                                            <Setter Property="HorizontalAlignment" Value="Center" />
+                                            <Setter Property="FontWeight" Value="SemiBold"/>
+                                        </Style>
+                                    </DataGridTextColumn.ElementStyle>
+                                </DataGridTextColumn>
+
+                                <DataGridTemplateColumn Header="Actions" Width="Auto">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                                <Button Content="✏" Width="30" Height="30" Margin="0,0,5,0" 
+                                                        Background="White" BorderBrush="#E5E7EB" BorderThickness="1"
+                                                        Cursor="Hand">
+                                                    <Button.Template>
+                                                        <ControlTemplate TargetType="Button">
+                                                            <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="4">
+                                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                            </Border>
+                                                        </ControlTemplate>
+                                                    </Button.Template>
+                                                </Button>
+
+                                                <Button Content="🗑" Width="30" Height="30" 
+                                                        Background="White" BorderBrush="#E5E7EB" BorderThickness="1" 
+                                                        Foreground="Red" Cursor="Hand">
+                                                    <Button.Template>
+                                                        <ControlTemplate TargetType="Button">
+                                                            <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="4">
+                                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" TextElement.Foreground="{TemplateBinding Foreground}"/>
+                                                            </Border>
+                                                        </ControlTemplate>
+                                                    </Button.Template>
+                                                </Button>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                
+                            </DataGrid.Columns>
+                            
+                        </DataGrid>
+                    </Grid>
                 </StackPanel>
             </Border>
         </StackPanel>

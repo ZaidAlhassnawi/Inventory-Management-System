@@ -14,3 +14,20 @@ D:\Projects\4- Inventory Management System\InventoryManagementSystem_DataAccessL
 D:\Projects\4- Inventory Management System\InventoryManagementSystem_DataAccessLayer\obj\Debug\net8.0\refint\InventoryManagementSystem_DataAccessLayer.dll
 D:\Projects\4- Inventory Management System\InventoryManagementSystem_DataAccessLayer\obj\Debug\net8.0\InventoryManagementSystem_DataAccessLayer.pdb
 D:\Projects\4- Inventory Management System\InventoryManagementSystem_DataAccessLayer\obj\Debug\net8.0\ref\InventoryManagementSystem_DataAccessLayer.dll
+D:\Projects\New folder (2)\Inventory Management System\InventoryManagementSystem_DataAccessLayer\bin\Debug\net8.0\appsettings.json
+D:\Projects\New folder (2)\Inventory Management System\InventoryManagementSystem_DataAccessLayer\bin\Debug\net8.0\InventoryManagementSystem_DataAccessLayer.deps.json
+D:\Projects\New folder (2)\Inventory Management System\InventoryManagementSystem_DataAccessLayer\bin\Debug\net8.0\InventoryManagementSystem_DataAccessLayer.dll
+D:\Projects\New folder (2)\Inventory Management System\InventoryManagementSystem_DataAccessLayer\bin\Debug\net8.0\InventoryManagementSystem_DataAccessLayer.pdb
+D:\Projects\New folder (2)\Inventory Management System\InventoryManagementSystem_DataAccessLayer\bin\Debug\net8.0\InventoryManagementSystem_Model.dll
+D:\Projects\New folder (2)\Inventory Management System\InventoryManagementSystem_DataAccessLayer\bin\Debug\net8.0\InventoryManagementSystem_Model.pdb
+D:\Projects\New folder (2)\Inventory Management System\InventoryManagementSystem_DataAccessLayer\obj\Debug\net8.0\InventoryManagementSystem_DataAccessLayer.csproj.AssemblyReference.cache
+D:\Projects\New folder (2)\Inventory Management System\InventoryManagementSystem_DataAccessLayer\obj\Debug\net8.0\InventoryManagementSystem_DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\New folder (2)\Inventory Management System\InventoryManagementSystem_DataAccessLayer\obj\Debug\net8.0\InventoryManagementSystem_DataAccessLayer.AssemblyInfoInputs.cache
+D:\Projects\New folder (2)\Inventory Management System\InventoryManagementSystem_DataAccessLayer\obj\Debug\net8.0\InventoryManagementSystem_DataAccessLayer.AssemblyInfo.cs
+D:\Projects\New folder (2)\Inventory Management System\InventoryManagementSystem_DataAccessLayer\obj\Debug\net8.0\InventoryManagementSystem_DataAccessLayer.csproj.CoreCompileInputs.cache
+D:\Projects\New folder (2)\Inventory Management System\InventoryManagementSystem_DataAccessLayer\obj\Debug\net8.0\InventoryManagementSystem_DataAccessLayer.sourcelink.json
+D:\Projects\New folder (2)\Inventory Management System\InventoryManagementSystem_DataAccessLayer\obj\Debug\net8.0\Inventor.27B91475.Up2Date
+D:\Projects\New folder (2)\Inventory Management System\InventoryManagementSystem_DataAccessLayer\obj\Debug\net8.0\InventoryManagementSystem_DataAccessLayer.dll
+D:\Projects\New folder (2)\Inventory Management System\InventoryManagementSystem_DataAccessLayer\obj\Debug\net8.0\refint\InventoryManagementSystem_DataAccessLayer.dll
+D:\Projects\New folder (2)\Inventory Management System\InventoryManagementSystem_DataAccessLayer\obj\Debug\net8.0\InventoryManagementSystem_DataAccessLayer.pdb
+D:\Projects\New folder (2)\Inventory Management System\InventoryManagementSystem_DataAccessLayer\obj\Debug\net8.0\ref\InventoryManagementSystem_DataAccessLayer.dll

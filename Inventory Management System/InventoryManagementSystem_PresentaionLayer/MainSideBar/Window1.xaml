@@ -6,9 +6,10 @@
         xmlns:Icon ="http://metro.mahapps.com/winfx/xaml/iconpacks"
         xmlns:local="clr-namespace:InventoryManagementSystem_PresentaionLayer.MainSideBar"
         mc:Ignorable="d" x:Name="SideBarWindow"
-        Title="Inventory System" Height="650" Width="1000"
+        Title="Inventory System" Height="650" Width="1000" WindowState="Maximized"
         WindowStartupLocation="CenterScreen"  Background="{StaticResource Bg_Main}" FontFamily="{StaticResource Font_Main}">
 
+    <Grid>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="250"/>
@@ -33,7 +34,9 @@
                     <RadioButton Content="Products" Tag="{StaticResource Icon_Products}" Style="{StaticResource NavButtonStyle}" GroupName="Nav"
                                   Command="{Binding OpenProductsCommand}"
                                   CommandParameter="{Binding ElementName=SideBarWindow}"/>
-                    <RadioButton Content="Categories" Tag="{StaticResource Icon_Categories}" Style="{StaticResource NavButtonStyle}" GroupName="Nav"/>
+                    <RadioButton Content="Categories" Tag="{StaticResource Icon_Categories}" Style="{StaticResource NavButtonStyle}" GroupName="Nav"
+                                 Command="{Binding OpenCategoriesCommand}"
+                                 CommandParameter="{Binding ElementName=SideBarWindow}"/>
                     <RadioButton Content="Suppliers" Tag="{StaticResource Icon_Suppliers}" Style="{StaticResource NavButtonStyle}" GroupName="Nav"/>
                     <RadioButton Content="Invetory Log" Tag="{StaticResource Icon_Inventory}" Style="{StaticResource NavButtonStyle}" GroupName="Nav"/>
                     <RadioButton Content="Reports" Tag="{StaticResource Icon_Reports}" Style="{StaticResource NavButtonStyle}" GroupName="Nav"/>
@@ -125,6 +128,11 @@
             <Border Grid.Row="1" Margin="10" Background="#F9FAFB">
                 <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
             </Border>
+        </Grid>
+       
+    </Grid>
+        <Grid x:Name="BackgroundOpasity" Background="#B3000000" Visibility="Collapsed">
+
         </Grid>
     </Grid>
 </Window>

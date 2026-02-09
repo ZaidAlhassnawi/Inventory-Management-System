@@ -2,6 +2,8 @@
 using CommunityToolkit.Mvvm.Input;
 using InventoryManagementSystem_Model.Interfaces;
 using InventoryManagementSystem_Model.Models;
+using InventoryManagementSystem_PresentaionLayer.Category.ViewCategory;
+using InventoryManagementSystem_PresentaionLayer.Category.ViewModeCategory;
 using InventoryManagementSystem_PresentaionLayer.MainSideBar;
 using InventoryManagementSystem_PresentaionLayer.Products_W.Products_w;
 using Microsoft.Extensions.DependencyInjection;
@@ -39,7 +41,6 @@ namespace InventoryManagementSystem_PresentaionLayer.Products_W.Products_V
         {
             _ProductRepo = ProductRepo;
 
-
             LoadProducts();
         }
 
@@ -66,12 +67,30 @@ namespace InventoryManagementSystem_PresentaionLayer.Products_W.Products_V
         [RelayCommand]
         private void OpenAddProductWindow(object parameter)
         {
+            var mainWin = Application.Current.Windows.OfType<Window1>().FirstOrDefault();
+            if (mainWin != null) mainWin.BackgroundOpasity.Visibility = Visibility.Visible;
 
             var app = (App)Application.Current;
-            var signupPage = app._host.Services.GetRequiredService<AddEditProducts>();
+            var addEditWindow = app._host.Services.GetRequiredService<AddEditProducts>();
 
-            signupPage.ShowDialog();
+            addEditWindow.Owner = mainWin;
+            addEditWindow.WindowStartupLocation = WindowStartupLocation.CenterOwner;
 
+            var result = addEditWindow.ShowDialog();
+
+            if (mainWin != null) mainWin.BackgroundOpasity.Visibility = Visibility.Collapsed;
+
+            if (result == true)
+            {
+                if (addEditWindow.DataContext is AddProductViewModel vm)
+                {
+                    var newItem = vm.CurrentProduct;
+
+                    ProductList.Add(newItem);
+                }
+            }
+
+           
         }
     }
 }

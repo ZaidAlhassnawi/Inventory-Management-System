@@ -1,8 +1,9 @@
-﻿using InventoryManagementSystem_Model.Interfaces;
+﻿using Dapper;
+using InventoryManagementSystem_Model.Interfaces;
 using InventoryManagementSystem_Model.Models;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
-using Dapper;
+using Microsoft.Extensions.Options;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
@@ -16,9 +17,9 @@ namespace InventoryManagementSystem_DataAccessLayer.ProductRepository
     {
         private readonly string _connectionString;
 
-        public GetProductByID (IConfiguration configuration)
+        public GetProductByID(IOptions<DataAccessSettings> options)
         {
-            _connectionString = configuration.GetConnectionString("DBConnectionString");
+            _connectionString = options.Value.DBConnectionString;
         }
         public async Task<ProductDTO> GetByIDAsync(int ID)
         {

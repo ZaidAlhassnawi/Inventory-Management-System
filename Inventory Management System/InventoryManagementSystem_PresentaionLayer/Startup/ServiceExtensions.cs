@@ -2,12 +2,15 @@
 using InventoryManagementSystem_BusinessLayer.ProductServices;
 using InventoryManagementSystem_BusinessLayer.SupplierServices;
 using InventoryManagementSystem_BusinessLayer.UserServices;
+using InventoryManagementSystem_DataAccessLayer;
 using InventoryManagementSystem_DataAccessLayer.CategoreyRepository;
 using InventoryManagementSystem_DataAccessLayer.ProductRepository;
 using InventoryManagementSystem_DataAccessLayer.SupplierRepository;
 using InventoryManagementSystem_DataAccessLayer.UserRepo;
 using InventoryManagementSystem_Model.Interfaces;
 using InventoryManagementSystem_Model.Models;
+using InventoryManagementSystem_PresentaionLayer.Category.ViewCategory;
+using InventoryManagementSystem_PresentaionLayer.Category.ViewModeCategory;
 using InventoryManagementSystem_PresentaionLayer.Global;
 using InventoryManagementSystem_PresentaionLayer.MainSideBar;
 using InventoryManagementSystem_PresentaionLayer.MainSideBar.ViewModelsSideBar;
@@ -35,10 +38,13 @@ namespace InventoryManagementSystem_PresentaionLayer.Startup
             builder.Services.AddRepositories();
             builder.Services.AddBusinessServices();
             builder.Services.AddPresentationLayer();
+            builder.Services.Configure<DataAccessSettings>(builder.Configuration.GetSection("ConnectionStrings"));
+
         }
 
         private static IServiceCollection AddRepositories(this IServiceCollection services)
         {
+
         
             //User Repositories
             services.AddTransient<IAddRepository<_User>, AddUser>();
@@ -50,10 +56,12 @@ namespace InventoryManagementSystem_PresentaionLayer.Startup
 
             //Product Repositories
             services.AddTransient<IAddRepository<ProductDTO>, AddProductRepostiory>();
+            services.AddTransient<IGetAllRepository<ProductDTO>, GetAllProductsRepository>();
 
 
             //Category Repository
             services.AddTransient<IGetAllRepository<CategoryDTO>, GetAllCategoreiesRepository>();
+            services.AddTransient<IAddRepository<CategoryDTO>, AddCategoryRepostiory>();
 
 
             //Supplier Repostiory
@@ -75,13 +83,15 @@ namespace InventoryManagementSystem_PresentaionLayer.Startup
 
 
             // --- Product Services  ---
-             services.AddTransient<IAddService<ProductDTO>, AddProductService>();
+            services.AddTransient<IAddService<ProductDTO>, AddProductService>();
+            services.AddTransient<IGetAllService<ProductDTO>, GetAllProductsService>();
 
 
             // -- Category Services --
             services.AddTransient<IGetAllService<CategoryDTO>, GetAllCategoreiesService>();
+            services.AddTransient<IAddService<CategoryDTO>, AddCategoryService>();
 
-            //-- Category Serivces --
+            //-- Supplier Serivces --
             services.AddTransient<IGetAllService<SupplierDTO>, GetAllSuppliersService>();
 
             return services;
@@ -95,6 +105,9 @@ namespace InventoryManagementSystem_PresentaionLayer.Startup
             services.AddTransient<SideBarViewModel>();
             services.AddTransient<AddProductViewModel>();
             services.AddTransient<IPasswordHasher, PasswordHasher>();
+            services.AddTransient<Product_w1ViewModel>();
+            services.AddTransient<CategoryViewModel>();
+            services.AddTransient<AddEditCategoryViewModel>();
 
             // Windows
             services.AddTransient<UserWindow>();
@@ -104,6 +117,9 @@ namespace InventoryManagementSystem_PresentaionLayer.Startup
             services.AddTransient<Window1>();
             services.AddTransient<Product_w1>();
             services.AddTransient<AddEditProducts>();
+
+            services.AddTransient<CategoryWindow>();
+            services.AddTransient<AddEditCategoryWindow>();
 
             return services;
         }

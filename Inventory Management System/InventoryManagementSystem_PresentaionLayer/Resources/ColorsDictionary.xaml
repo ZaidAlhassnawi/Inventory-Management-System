@@ -47,4 +47,9 @@
     <SolidColorBrush x:Key="WhiteBrush" Color="#FFFFFF"/>
     <SolidColorBrush x:Key="DangerRed" Color="#EF4444"/>
 
+    <SolidColorBrush x:Key="SecondaryGray" Color="#6B7280"/>
+    <SolidColorBrush x:Key="BorderGray" Color="#E5E7EB"/>
+    <SolidColorBrush x:Key="BgLightGray" Color="#F9FAFB"/>
+    <SolidColorBrush x:Key="AccentBlue" Color="#2563EB"/>
+
 </ResourceDictionary>

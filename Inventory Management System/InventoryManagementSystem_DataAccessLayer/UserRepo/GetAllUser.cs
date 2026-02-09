@@ -2,6 +2,7 @@
 using InventoryManagementSystem_Model.Models;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,9 +15,9 @@ namespace InventoryManagementSystem_DataAccessLayer.UserRepo
     {
         private readonly string _connectionString;
 
-        public GetAllUser(IConfiguration configuration)
+        public GetAllUser(IOptions<DataAccessSettings> options)
         {
-            _connectionString = configuration.GetConnectionString("DBConnectionString");
+            _connectionString = options.Value.DBConnectionString;
         }
         public async Task<List<User>> GetAllAsync()
         {

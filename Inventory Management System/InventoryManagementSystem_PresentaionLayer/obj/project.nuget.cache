@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "RbJTX45ji0s=",
+  "dgSpecHash": "g6x0AMU2IIc=",
   "success": true,
   "projectFilePath": "D:\\Projects\\New folder (2)\\Inventory Management System\\InventoryManagementSystem_PresentaionLayer\\InventoryManagementSystem_PresentaionLayer.csproj",
   "expectedPackageFiles": [
@@ -108,11 +108,7 @@
     "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\system.security.cryptography.pkcs\\8.0.1\\system.security.cryptography.pkcs.8.0.1.nupkg.sha512",
     "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\system.security.cryptography.protecteddata\\8.0.0\\system.security.cryptography.protecteddata.8.0.0.nupkg.sha512",
     "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\system.text.encodings.web\\10.0.2\\system.text.encodings.web.10.0.2.nupkg.sha512",
-    "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\system.text.json\\10.0.2\\system.text.json.10.0.2.nupkg.sha512",
-    "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.23\\microsoft.windowsdesktop.app.ref.8.0.23.nupkg.sha512",
-    "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.23\\microsoft.netcore.app.ref.8.0.23.nupkg.sha512",
-    "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.23\\microsoft.aspnetcore.app.ref.8.0.23.nupkg.sha512",
-    "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.23\\microsoft.netcore.app.host.win-x64.8.0.23.nupkg.sha512"
+    "C:\\Users\\Zaid Al-Hassnawi\\.nuget\\packages\\system.text.json\\10.0.2\\system.text.json.10.0.2.nupkg.sha512"
   ],
   "logs": []
 }
