@@ -1,0 +1,147 @@
+﻿<Page x:Class="InventoryManagementSystem_PresentaionLayer.Settings.ViewSettings.SettingsView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:InventoryManagementSystem_PresentaionLayer.Settings.ViewSettings"
+      mc:Ignorable="d" 
+      d:DesignHeight="1120" d:DesignWidth="1200"
+        Background="{DynamicResource WindowBackgroundColor}">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid Margin="10"  >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Left Panel -->
+            <StackPanel Grid.Column="0" Margin="0,0,10,0">
+                <!-- Header -->
+                <TextBlock Text="Settings" Style="{DynamicResource HeaderTextStyle}"/>
+                <TextBlock Text="Manage your account and application preferences" FontSize="14" Style="{DynamicResource LabelStyle}" Margin="0,0,0,15"/>
+
+                <!-- Profile Information Section -->
+                <GroupBox Header="Profile Information" FontSize="16" Style="{DynamicResource GroupBoxStyle}">
+                    <StackPanel Margin="10">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,10">
+                            <Image Source="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3" 
+                           Width="50" Height="50" Margin="0,0,10,0" ClipToBounds="True" Stretch="UniformToFill"
+                           Style="{DynamicResource CircularImageStyle}"/>
+                            <TextBlock Text="Profile Picture URL" VerticalAlignment="Center" FontWeight="SemiBold"/>
+                        </StackPanel>
+                        <TextBox Text="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3" 
+                         Style="{DynamicResource InputTextBoxStyle}" />
+
+                        <WrapPanel Margin="0,10,0,0" HorizontalAlignment="Stretch" Orientation="Horizontal" >
+                            <StackPanel Width="325" Margin="0,0,10,0">
+                                <TextBlock Text="Full Name" FontSize="14" Style="{DynamicResource LabelStyle}"/>
+                                <TextBox Text="John Admin" Style="{DynamicResource InputTextBoxStyle}" />
+                            </StackPanel>
+                            <StackPanel Width="320">
+                                <TextBlock Text="Email Address" FontSize="14" Style="{DynamicResource LabelStyle}"/>
+                                <TextBox Text="admin@example.com" Style="{DynamicResource InputTextBoxStyle}" />
+                            </StackPanel>
+                        </WrapPanel>
+
+                        <TextBlock Text="Role" FontSize="14" Margin="0,10,0,0" Style="{DynamicResource LabelStyle}"/>
+                        <TextBox Text="Admin" Style="{DynamicResource InputTextBoxStyle}" IsReadOnly="True"/>
+                        <TextBlock Text="Contact your administrator to change your role" FontSize="14" Style="{DynamicResource DescriptionTextStyle}" Margin="0,4,0,8"/>
+                        <Button Content="Update Profile" Style="{DynamicResource AddButtonStyle}" Width="150" HorizontalAlignment="Left"/>
+                    </StackPanel>
+                </GroupBox>
+
+                <!-- Application Settings Section -->
+                <GroupBox Header="Application Settings" FontSize="16" Style="{DynamicResource GroupBoxStyle}" Margin="0,15,0,0">
+                    <StackPanel Margin="10 0 10 10">
+                        <TextBlock Text="Configure application behavior and preferences" FontSize="14" Style="{DynamicResource DescriptionTextStyle}" Margin="0,0,0,10"/>
+
+                        <TextBlock Text="Application Name" FontSize="14" Style="{DynamicResource LabelStyle}"/>
+                        <TextBox Text="Inventory Management System" Style="{DynamicResource InputTextBoxStyle}" />
+
+                        <TextBlock Text="Low Stock Threshold" FontSize="14" Style="{DynamicResource LabelStyle}" Margin="0,10,0,0"/>
+                        <TextBox Text="10" Style="{DynamicResource InputTextBoxStyle}" />
+                        <TextBlock Text="Products below this quantity will be marked as low stock" FontSize="14" Style="{DynamicResource DescriptionTextStyle}" />
+                        <Separator Margin="0 20 0 10"/>
+
+                        <!-- Notifications -->
+                        <GroupBox Header="Notifications" Style="{DynamicResource GroupBoxStyle}" Margin="0,10,0,0">
+                            <StackPanel Margin="5">
+                                <CheckBox Content="Enable Notifications" IsChecked="True" VerticalContentAlignment="Center"/>
+                                <TextBlock Text="Receive in-app notifications for important events" FontSize="12" Style="{DynamicResource DescriptionTextStyle}" Margin="20,0,0,10"/>
+                                <CheckBox Content="Email Alerts" IsChecked="True" VerticalContentAlignment="Center" />
+                                <TextBlock Text="Receive email alerts for low stock and critical updates" FontSize="12" Style="{DynamicResource DescriptionTextStyle}" Margin="20,0,0,0"/>
+                            </StackPanel>
+                        </GroupBox>
+
+                        <Separator Margin="0 10 0 10"/>
+
+                        <!-- Data Management -->
+                        <GroupBox Header="Data Management" Style="{DynamicResource GroupBoxStyle}" Margin="0,10,0,0">
+                            <StackPanel Margin="5">
+                                <CheckBox Content="Automatic Backup" IsChecked="True" VerticalContentAlignment="Center" />
+                                <TextBlock Text="Automatically backup data daily" FontSize="12" Style="{DynamicResource DescriptionTextStyle}" Margin="20,0,0,0"/>
+                            </StackPanel>
+                        </GroupBox>
+
+
+                        <Button Content="Save Settings" Style="{DynamicResource AddButtonStyle}" Width="150" Margin="0,10,0,0" HorizontalAlignment="Left"/>
+                    </StackPanel>
+                </GroupBox>
+            </StackPanel>
+
+            <!-- Right Panel -->
+            <StackPanel Grid.Column="1" Margin="0 65 0 0">
+                <!-- Account Security -->
+                <GroupBox Header="Account Security" Style="{DynamicResource GroupBoxStyle}" Margin="0,0,0,15">
+                    <StackPanel Margin="10">
+
+                        <StackPanel Margin="0,5,0,10">
+                            <TextBlock Text="Password" FontSize="14" Style="{DynamicResource LabelStyle}"/>
+                            <Button Content="Change Password" Style="{DynamicResource AddButtonStyle}" 
+                            Width="430" Height="30" HorizontalAlignment="Center" Margin="0,5,0,0"/>
+                        </StackPanel>
+
+                        <StackPanel Margin="0,5,0,10">
+                            <TextBlock Text="Two-Factor Authentication" FontSize="14" Style="{DynamicResource LabelStyle}"/>
+                            <Button Content="Enable 2FA" Style="{DynamicResource AddButtonStyle}" Width="430" Height="30"
+                            HorizontalAlignment="Center" Margin="0,5,0,0"/>
+                        </StackPanel>
+
+                        <TextBlock Text="Account Actions" FontSize="14" Margin="0,10,0,5" FontWeight="SemiBold"/>
+                        <Button Content="Export Data" Style="{DynamicResource AddButtonStyle}" Margin="0,0,0,15"
+                        Width="430" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <Button Content="Delete Account" Width="430" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center"
+                        Style="{DynamicResource DangerButtonStyle}" />
+                    </StackPanel>
+                </GroupBox>
+
+                <!-- System Information -->
+                <GroupBox Header="System Information" Style="{DynamicResource GroupBoxStyle}">
+                    <Grid Margin="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Text="Version:" Grid.Row="0" Grid.Column="0" Style="{DynamicResource LabelStyle}"/>
+                        <TextBlock Text="1.0.0" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right"/>
+                        <TextBlock Text="Last Backup:" Grid.Row="1" Grid.Column="0" Style="{DynamicResource LabelStyle}"/>
+                        <TextBlock Text="Today, 3:00 AM" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right"/>
+                        <TextBlock Text="Storage Used:" Grid.Row="2" Grid.Column="0" Style="{DynamicResource LabelStyle}"/>
+                        <TextBlock Text="2.4 GB" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right"/>
+                        <TextBlock Text="Uptime:" Grid.Row="3" Grid.Column="0" Style="{DynamicResource LabelStyle}"/>
+                        <TextBlock Text="99.9%" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Right"/>
+                    </Grid>
+                </GroupBox>
+            </StackPanel>
+
+        </Grid>
+    </ScrollViewer>
+</Page>

@@ -1,0 +1,208 @@
+﻿<Page x:Class="InventoryManagementSystem_PresentaionLayer.Products_W.Product_w1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:InventoryManagementSystem_PresentaionLayer.Products_W"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1200"
+      Background="{StaticResource Bg_Main}">
+
+   
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="30">
+
+            <Grid Margin="0,0,0,30">
+                <StackPanel>
+                    <TextBlock Text="Products" FontSize="28" FontWeight="Bold" Foreground="{StaticResource PrimaryTextBrush}"/>
+                    <TextBlock Text="Manage your product inventory and stock levels" FontSize="14" Foreground="{StaticResource SecondaryTextBrush}" Margin="0,5,0,0"/>
+                </StackPanel>
+                <Button Content="+ Add Product" Style="{StaticResource PrimaryButtonStyle}" HorizontalAlignment="Right" VerticalAlignment="Top"
+                        Command="{Binding OpenAddProductWindowCommand}"/>
+            </Grid>
+
+            <Grid Margin="0,0,0,20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="20"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="20"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Border Grid.Column="0" Style="{StaticResource CardStyle}" Margin="0">
+                    <StackPanel>
+                        <TextBlock Text="Total Products" FontSize="12" Foreground="{StaticResource SecondaryTextBrush}"/>
+                        <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                            <TextBlock Text="📦" FontSize="24" Foreground="{StaticResource AccentTextBrush}" Margin="0,0,10,0"/>
+                            <TextBlock Text="3" FontSize="24" FontWeight="Bold" Foreground="{StaticResource PrimaryTextBrush}"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+
+                <Border Grid.Column="2" Style="{StaticResource CardStyle}" Margin="0">
+                    <StackPanel>
+                        <TextBlock Text="Low Stock" FontSize="12" Foreground="{StaticResource SecondaryTextBrush}"/>
+                        <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                            <TextBlock Text="⚠" FontSize="24" Foreground="{StaticResource WarningBrush}" Margin="0,0,10,0"/>
+                            <TextBlock Text="1" FontSize="24" FontWeight="Bold" Foreground="{StaticResource WarningBrush}"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+
+                <Border Grid.Column="4" Style="{StaticResource CardStyle}" Margin="0">
+                    <StackPanel>
+                        <TextBlock Text="Out of Stock" FontSize="12" Foreground="{StaticResource SecondaryTextBrush}"/>
+                        <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                            <TextBlock Text="🚫" FontSize="24" Foreground="{StaticResource DangerBrush}" Margin="0,0,10,0"/>
+                            <TextBlock Text="0" FontSize="24" FontWeight="Bold" Foreground="{StaticResource DangerBrush}"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+            </Grid>
+
+            <Border Height="100" Style="{StaticResource CardStyle}" Padding="15" Margin="0 0 0 5">
+                <Grid Height="50">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="Filters" FontSize="18" FontWeight="Bold" VerticalAlignment="Top" Margin="0,-25,0,0" Grid.ColumnSpan="2"/>
+
+                    <Border  Grid.Column="0" Grid.ColumnSpan="2" Margin="5">
+                        <StackPanel>
+                            <TextBox Style="{StaticResource ModernTextBoxStyle}" Tag="Search products..."/>
+                        </StackPanel>
+                    </Border>
+
+                    <ComboBox Style="{StaticResource InputComboBoxStyle}" Grid.Column="3" Width="150" Padding="10,5" SelectedIndex="0">
+                        <ComboBoxItem Content="All Categories"/>
+                    </ComboBox>
+                    <ComboBox Style="{StaticResource InputComboBoxStyle}" Grid.Column="5" Width="150" Padding="10,5" SelectedIndex="0">
+                        <ComboBoxItem Content="All Stock"/>
+                    </ComboBox>
+                </Grid>
+            </Border>
+
+            <Border Style="{StaticResource CardStyle}" Padding="3" Margin="0">
+                <StackPanel>
+                    <TextBlock Text="Products (3)" Margin="20,20,0,5" FontWeight="Bold"/>
+                    <TextBlock Text="List of all products in your inventory" Margin="20,0,0,20" Foreground="{StaticResource SecondaryTextBrush}" FontSize="12"/>
+
+                    <Grid Background="White">
+
+                        <DataGrid x:Name="membersDataGrid"
+                                  ItemsSource="{Binding ProductList}"
+                                  Style="{DynamicResource DataGridStyle1}"
+                                  RowStyle="{DynamicResource DataGridRowStyle1}"
+                                  CellStyle="{DynamicResource DataGridCellStyle1}"
+                                  ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}"
+                                  RowHeight="60" BorderThickness="0" Background="Transparent">
+
+                            <DataGrid.Columns>
+
+                                <DataGridTemplateColumn Header="Product" Width="2*">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Border Width="48" Height="48" CornerRadius="8" Background="#F3F4F6" Margin="0,0,12,0"
+                                                        ClipToBounds="True">
+
+                                                    <Image Stretch="UniformToFill"
+                                                           Source="{Binding ImageURL,
+                                                           Converter={StaticResource PathToImageConverter},
+                                                           TargetNullValue=/Assets/no-image.png,
+                                                           FallbackValue=/Assets/no-image.png}" />
+                                                </Border>
+                                                <StackPanel VerticalAlignment="Center">
+                                                    <TextBlock Text="{Binding ProductName}" FontWeight="Bold" FontSize="14"/>
+                                                    <TextBlock Text="{Binding Description}" FontSize="12" Opacity="0.7" Margin="0,2,0,0"/>
+                                                </StackPanel>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                    
+                                </DataGridTemplateColumn>
+
+                                <DataGridTextColumn Header="SKU" Binding="{Binding SKU}" Width="*"/>
+
+                                <DataGridTextColumn Header="Category" Binding="{Binding CategoryName}" Width="*"/>
+
+                                <DataGridTextColumn Header="Supplier" Binding="{Binding SupplierName}" Width="1.5*"/>
+
+                                <DataGridTemplateColumn Header="Stock" Width="*">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Border Background="#111827" CornerRadius="12" Padding="10,4" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                                <TextBlock Text="{Binding Stock}" Foreground="White" FontSize="11" FontWeight="Bold"/>
+                                            </Border>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+
+                                <DataGridTextColumn Header="Cost Price" Binding="{Binding CostPrice, StringFormat=C}" Width="*">
+                                    <DataGridTextColumn.ElementStyle>
+                                        <Style TargetType="TextBlock">
+                                            <Setter Property="HorizontalAlignment" Value="Center" />
+                                        </Style>
+                                    </DataGridTextColumn.ElementStyle>
+                                </DataGridTextColumn>
+
+                                <DataGridTextColumn Header="Selling Price" Binding="{Binding SellingPrice, StringFormat=C}" Width="*">
+                                    <DataGridTextColumn.ElementStyle>
+                                        <Style TargetType="TextBlock">
+                                            <Setter Property="HorizontalAlignment" Value="Center" />
+                                            <Setter Property="FontWeight" Value="SemiBold"/>
+                                        </Style>
+                                    </DataGridTextColumn.ElementStyle>
+                                </DataGridTextColumn>
+
+                                <DataGridTemplateColumn Header="Actions" Width="Auto">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                                    <Button Content="✏" Width="30" Height="30" Margin="0,0,5,0" 
+                                                            Background="White" BorderBrush="#E5E7EB" BorderThickness="1"
+                                                            Cursor="Hand" Command="{Binding DataContext.OpenEditProductCommand, RelativeSource={RelativeSource AncestorType=DataGrid}}"
+                                                            CommandParameter="{Binding}">
+                                                        <Button.Template>
+                                                            <ControlTemplate TargetType="Button">
+                                                                <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" 
+                                                                        BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="4">
+                                                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                                </Border>
+                                                            </ControlTemplate>
+                                                        </Button.Template>
+                                                    </Button>
+
+                                                <Button Content="🗑" Width="30" Height="30" 
+                                                        Background="White" BorderBrush="#E5E7EB" BorderThickness="1" 
+                                                        Foreground="Red" Cursor="Hand">
+                                                    <Button.Template>
+                                                        <ControlTemplate TargetType="Button">
+                                                            <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="4">
+                                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" TextElement.Foreground="{TemplateBinding Foreground}"/>
+                                                            </Border>
+                                                        </ControlTemplate>
+                                                    </Button.Template>
+                                                </Button>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                
+                            </DataGrid.Columns>
+                            
+                        </DataGrid>
+                    </Grid>
+                </StackPanel>
+            </Border>
+            
+        </StackPanel>
+    </ScrollViewer>
+</Page>

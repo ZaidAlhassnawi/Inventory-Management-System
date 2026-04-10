@@ -1,0 +1,31 @@
+D:\Projects\4- Inventory Management System\InventoryManagementSystem_Model\bin\Debug\net8.0\InventoryManagementSystem_Model.deps.json
+D:\Projects\4- Inventory Management System\InventoryManagementSystem_Model\bin\Debug\net8.0\InventoryManagementSystem_Model.dll
+D:\Projects\4- Inventory Management System\InventoryManagementSystem_Model\bin\Debug\net8.0\InventoryManagementSystem_Model.pdb
+D:\Projects\4- Inventory Management System\InventoryManagementSystem_Model\bin\Debug\net8.0\Microsoft.Data.Tools.Schema.Sql.UnitTesting.dll
+D:\Projects\4- Inventory Management System\InventoryManagementSystem_Model\bin\Debug\net8.0\Microsoft.Data.Tools.Schema.Sql.UnitTestingAdapter.dll
+D:\Projects\4- Inventory Management System\InventoryManagementSystem_Model\obj\Debug\net8.0\InventoryManagementSystem_Model.csproj.AssemblyReference.cache
+D:\Projects\4- Inventory Management System\InventoryManagementSystem_Model\obj\Debug\net8.0\InventoryManagementSystem_Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\4- Inventory Management System\InventoryManagementSystem_Model\obj\Debug\net8.0\InventoryManagementSystem_Model.AssemblyInfoInputs.cache
+D:\Projects\4- Inventory Management System\InventoryManagementSystem_Model\obj\Debug\net8.0\InventoryManagementSystem_Model.AssemblyInfo.cs
+D:\Projects\4- Inventory Management System\InventoryManagementSystem_Model\obj\Debug\net8.0\InventoryManagementSystem_Model.csproj.CoreCompileInputs.cache
+D:\Projects\4- Inventory Management System\InventoryManagementSystem_Model\obj\Debug\net8.0\Inventor.E480D235.Up2Date
+D:\Projects\4- Inventory Management System\InventoryManagementSystem_Model\obj\Debug\net8.0\InventoryManagementSystem_Model.dll
+D:\Projects\4- Inventory Management System\InventoryManagementSystem_Model\obj\Debug\net8.0\refint\InventoryManagementSystem_Model.dll
+D:\Projects\4- Inventory Management System\InventoryManagementSystem_Model\obj\Debug\net8.0\InventoryManagementSystem_Model.pdb
+D:\Projects\4- Inventory Management System\InventoryManagementSystem_Model\obj\Debug\net8.0\ref\InventoryManagementSystem_Model.dll
+D:\Projects\New folder (2)\Inventory Management System\InventoryManagementSystem_Model\bin\Debug\net8.0\InventoryManagementSystem_Model.deps.json
+D:\Projects\New folder (2)\Inventory Management System\InventoryManagementSystem_Model\bin\Debug\net8.0\InventoryManagementSystem_Model.dll
+D:\Projects\New folder (2)\Inventory Management System\InventoryManagementSystem_Model\bin\Debug\net8.0\InventoryManagementSystem_Model.pdb
+D:\Projects\New folder (2)\Inventory Management System\InventoryManagementSystem_Model\bin\Debug\net8.0\Microsoft.Data.Tools.Schema.Sql.UnitTesting.dll
+D:\Projects\New folder (2)\Inventory Management System\InventoryManagementSystem_Model\bin\Debug\net8.0\Microsoft.Data.Tools.Schema.Sql.UnitTestingAdapter.dll
+D:\Projects\New folder (2)\Inventory Management System\InventoryManagementSystem_Model\obj\Debug\net8.0\InventoryManagementSystem_Model.csproj.AssemblyReference.cache
+D:\Projects\New folder (2)\Inventory Management System\InventoryManagementSystem_Model\obj\Debug\net8.0\InventoryManagementSystem_Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\New folder (2)\Inventory Management System\InventoryManagementSystem_Model\obj\Debug\net8.0\InventoryManagementSystem_Model.AssemblyInfoInputs.cache
+D:\Projects\New folder (2)\Inventory Management System\InventoryManagementSystem_Model\obj\Debug\net8.0\InventoryManagementSystem_Model.AssemblyInfo.cs
+D:\Projects\New folder (2)\Inventory Management System\InventoryManagementSystem_Model\obj\Debug\net8.0\InventoryManagementSystem_Model.csproj.CoreCompileInputs.cache
+D:\Projects\New folder (2)\Inventory Management System\InventoryManagementSystem_Model\obj\Debug\net8.0\InventoryManagementSystem_Model.sourcelink.json
+D:\Projects\New folder (2)\Inventory Management System\InventoryManagementSystem_Model\obj\Debug\net8.0\Inventor.E480D235.Up2Date
+D:\Projects\New folder (2)\Inventory Management System\InventoryManagementSystem_Model\obj\Debug\net8.0\InventoryManagementSystem_Model.dll
+D:\Projects\New folder (2)\Inventory Management System\InventoryManagementSystem_Model\obj\Debug\net8.0\refint\InventoryManagementSystem_Model.dll
+D:\Projects\New folder (2)\Inventory Management System\InventoryManagementSystem_Model\obj\Debug\net8.0\InventoryManagementSystem_Model.pdb
+D:\Projects\New folder (2)\Inventory Management System\InventoryManagementSystem_Model\obj\Debug\net8.0\ref\InventoryManagementSystem_Model.dll

@@ -1,0 +1,20 @@
+﻿InventoryManagementSystem_PresentaionLayer
+1.0.0.0
+
+winexe
+C#
+.cs
+D:\Projects\4- Inventory Management System\InventoryManagementSystem_PresentaionLayer\obj\Debug\net8.0-windows\
+InventoryManagementSystem_PresentaionLayer
+none
+false
+TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
+D:\Projects\4- Inventory Management System\InventoryManagementSystem_PresentaionLayer\App.xaml
+23-37376721
+
+34-363931869
+298-1249786036
+Category\ViewCategory\AddEditCategoryWindow.xaml;Category\ViewCategory\CategoryWindow.xaml;Inventory Logs\ViewInventoryLogs\InventoryLogsView.xaml;Inventory Logs\ViewInventoryLogs\StockAdjustmentView.xaml;MainSideBar\Window1.xaml;Products_W\Products_w\AddEditProducts.xaml;Products_W\Products_w\Product_w1.xaml;Resources\AdjustmentsStyle.xaml;Resources\CategoryStyles.xaml;Resources\ColorsDictionary.xaml;Resources\Fonts.xaml;Resources\Icons.xaml;Resources\InventoryLogStyle.xaml;Resources\ProductsStyles.xaml;Resources\SettingsStyle.xaml;Resources\Styles.xaml;Resources\StylesDictionary.xaml;Settings\ViewSettings\SettingsView.xaml;Supplier\SupplierView\AddEditSupplierWindow.xaml;Supplier\SupplierView\SupplierWindow.xaml;User_W\ViewUser\UserSingin.xaml;User_W\ViewUser\UserSingnUp.xaml;User_W\ViewUser\UserWindow.xaml;
+
+False
+

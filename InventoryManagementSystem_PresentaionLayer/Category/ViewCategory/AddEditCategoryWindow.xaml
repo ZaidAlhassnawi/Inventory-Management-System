@@ -1,0 +1,87 @@
+﻿<Window x:Class="InventoryManagementSystem_PresentaionLayer.Category.ViewCategory.AddEditCategoryWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InventoryManagementSystem_PresentaionLayer.Category.ViewCategory"
+        mc:Ignorable="d" x:Name="AddEditCategory"
+        Title="Add New Category" Height="400" Width="500"
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent"
+        WindowStartupLocation="CenterScreen">
+
+    <Border Background="White" CornerRadius="10" BorderBrush="#E5E7EB" BorderThickness="1" Padding="15">
+        <StackPanel >
+            <DockPanel Margin="0,0,0,20">
+                <StackPanel>
+                    <TextBlock Text="{Binding Title}" FontSize="18" FontWeight="Bold"/>
+                    <TextBlock Text="Create a new category to organize your products" Foreground="Gray" FontSize="13" Margin="0,5,0,0"/>
+                </StackPanel>
+                <Button Content="✕" Background="Transparent" BorderThickness="0" HorizontalAlignment="Right" VerticalAlignment="Top" Cursor="Hand"
+                        Command="{Binding CancelCommand}"
+                        CommandParameter="{Binding ElementName=AddEditCategory}"/>
+            </DockPanel>
+
+            <StackPanel Grid.Column="0" Margin="5 10">
+                <TextBlock Text="Category Name" Style="{StaticResource LabelStyle}"/>
+                <Grid>
+                    <TextBox x:Name="txtCategoryName" Style="{StaticResource InputTextBoxStyle}" Tag="Enter SKU"
+                             Text="{Binding CategoreName, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}"/>
+                    <TextBlock Text="Enter Category Name..." Foreground="Gray" VerticalAlignment="Center" Padding="8 0" Margin="7,0,0,0" IsHitTestVisible="False">
+                        <TextBlock.Style>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="Visibility" Value="Collapsed"/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Text, ElementName=txtCategoryName}" Value="">
+                                        <Setter Property="Visibility" Value="Visible"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                </Grid>
+                <TextBlock Text="{Binding (Validation.Errors)[0].ErrorContent, ElementName=txtCategoryName}"
+                           Foreground="Red" FontSize="12" Margin="0,2,0,0">
+                    <TextBlock.Style>
+                        <Style TargetType="TextBlock">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding (Validation.HasError), ElementName=txtCategoryName}" Value="False">
+                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBlock.Style>
+                </TextBlock>
+            </StackPanel>
+
+            <StackPanel Grid.Column="0" Margin="5 10">
+                <TextBlock Text="Description (optional)" Style="{StaticResource LabelStyle}"/>
+                <Grid>
+                    <TextBox x:Name="txtDescription" Style="{StaticResource ModernInputStyle}" 
+                             Height="100" TextWrapping="Wrap" VerticalContentAlignment="Top" Padding="10"
+                             Text="{Binding CurrentCategory.Description,UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBlock Text="Product description..." Foreground="Gray" VerticalAlignment="Top" Padding="5 0" Margin="7,12,0,0" IsHitTestVisible="False">
+                        <TextBlock.Style>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="Visibility" Value="Collapsed"/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Text, ElementName=txtDescription}" Value="">
+                                        <Setter Property="Visibility" Value="Visible"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                </Grid>
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,25,0,0">
+                <Button Content="Cancel" Style="{StaticResource SecondaryButtonStyle}" Margin="0,0,10,0" Width="100"
+                         Command="{Binding CancelCommand}"
+                         CommandParameter="{Binding ElementName=AddEditCategory}"/>
+                <Button Content="{Binding btnTitle}" Style="{StaticResource PrimaryButtonStyle}"
+                        Command="{Binding SaveCommand}"
+                        CommandParameter="{Binding ElementName=AddEditCategory}"/>
+            </StackPanel>
+        </StackPanel>
+    </Border>
+</Window>
